@@ -1,4 +1,5 @@
 import "./globals.css";
+import TypingText from "@/app/components/TypingText";
 
 export const metadata = {
   title: "SecPrompt",
@@ -16,9 +17,21 @@ export default function RootLayout({
         
         {/* NAVBAR */}
         <nav className="flex items-center justify-between px-5 py-6 md:px-14">
-          <a href="/" className="text-xl font-semibold tracking-tight">
-            SecPrompt
-          </a>
+       <a href="/" className="flex flex-col leading-none">
+  <div className="flex items-center gap-2">
+    <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-[#16120F] text-sm font-semibold text-white">
+      S
+    </span>
+
+    <span className="text-xl font-semibold tracking-[-0.03em]">
+      SecPrompt
+    </span>
+  </div>
+
+  <span className="mt-1 hidden text-[11px] tracking-wide text-[#6A6258] sm:block">
+    <TypingText />
+  </span>
+</a>
 
           <div className="hidden items-center gap-8 text-sm md:flex">
             <a href="/product" className="hover:opacity-60">Product</a>
@@ -41,7 +54,7 @@ export default function RootLayout({
         {/* FOOTER */}
         <footer className="border-t border-[#17130f]/10 px-5 py-10 md:px-14">
           <div className="mx-auto flex max-w-7xl flex-col gap-4 text-sm text-[#6d6257] md:flex-row md:justify-between">
-            <p>© 2026 SecPrompt</p>
+            <p>© 2026 SecPrompt AB Sweden</p>
 
             <div className="flex gap-6">
               <a href="/security">Security</a>
