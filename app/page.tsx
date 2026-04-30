@@ -189,102 +189,91 @@ export default function Home() {
 {/* WHY SECPROMPT */}
 <section className="border-t border-[#16120F]/10 px-5 py-20 md:px-14 md:py-28">
   <div className="mx-auto max-w-6xl">
-    <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-      <div>
-        <p className="text-xs uppercase tracking-[0.25em] text-[#6A6258]">
-          Why SecPrompt
-        </p>
+    <div className="max-w-3xl">
+      <p className="text-xs uppercase tracking-[0.25em] text-[#6A6258]">
+        Why SecPrompt
+      </p>
 
-        <h2 className="mt-6 text-4xl font-medium leading-tight tracking-[-0.04em] md:text-6xl">
-          Move beyond collecting vendor evidence.
-        </h2>
+      <h2 className="mt-6 text-4xl font-medium leading-tight tracking-[-0.04em] md:text-6xl">
+        From document collection to evidence-based decisions.
+      </h2>
 
-        <p className="mt-6 text-lg leading-relaxed text-[#6A6258] md:text-xl">
-          Traditional TPRM tools help teams gather documents. SecPrompt helps
-          security and GRC teams understand what those documents mean against
-          internal controls, requirements, and risk expectations.
-        </p>
-      </div>
+      <p className="mt-6 text-lg leading-relaxed text-[#6A6258] md:text-xl">
+        SecPrompt helps teams move beyond storing vendor documents by evaluating
+        evidence against controls and producing reviewable risk findings.
+      </p>
+    </div>
 
-      {/* GRAPHIC */}
-      <div className="rounded-[2rem] border border-[#16120F]/10 bg-white p-5 shadow-sm">
-        <div className="grid gap-4 md:grid-cols-3">
-          <div className="rounded-2xl bg-[#F5F1E8] p-5">
-            <p className="text-xs uppercase tracking-[0.2em] text-[#6A6258]">
-              Input
-            </p>
-            <h3 className="mt-4 text-xl font-medium">Evidence</h3>
-            <div className="mt-5 space-y-3">
-              <div className="h-3 w-full rounded-full bg-[#16120F]/15" />
-              <div className="h-3 w-4/5 rounded-full bg-[#16120F]/10" />
-              <div className="h-3 w-2/3 rounded-full bg-[#16120F]/10" />
-            </div>
+    {/* COMPARISON */}
+    <div className="mt-14 overflow-hidden rounded-[2rem] border border-[#16120F]/10 bg-white shadow-sm">
+      <div className="grid md:grid-cols-2">
+        <div className="border-b border-[#16120F]/10 p-6 md:border-b-0 md:border-r md:p-8">
+          <p className="text-xs uppercase tracking-[0.25em] text-[#6A6258]">
+            Traditional TPRM
+          </p>
+
+          <div className="mt-8 space-y-6">
+            {[
+              ["Collects documents", "Questionnaires, reports, and policies are stored for manual review."],
+              ["Manual interpretation", "Analysts still read evidence and decide whether it satisfies controls."],
+              ["Inconsistent outputs", "Findings depend on reviewer judgment, time, and available context."],
+            ].map(([title, body]) => (
+              <div key={title} className="border-t border-[#16120F]/10 pt-5">
+                <h3 className="text-lg font-medium">{title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-[#6A6258]">
+                  {body}
+                </p>
+              </div>
+            ))}
           </div>
+        </div>
 
-          <div className="rounded-2xl bg-[#16120F] p-5 text-white">
-            <p className="text-xs uppercase tracking-[0.2em] text-white/40">
-              SecPrompt
-            </p>
-            <h3 className="mt-4 text-xl font-medium">AI review</h3>
-            <div className="mt-5 space-y-3">
-              <div className="rounded-full bg-[#B88A55]/30 px-3 py-2 text-xs text-[#F5D7A8]">
-                Extract controls
-              </div>
-              <div className="rounded-full bg-white/10 px-3 py-2 text-xs text-white/70">
-                Compare requirements
-              </div>
-              <div className="rounded-full bg-white/10 px-3 py-2 text-xs text-white/70">
-                Explain findings
-              </div>
-            </div>
-          </div>
+        <div className="bg-[#F5F1E8] p-6 md:p-8">
+          <p className="text-xs uppercase tracking-[0.25em] text-[#6A6258]">
+            SecPrompt
+          </p>
 
-          <div className="rounded-2xl bg-[#F5F1E8] p-5">
-            <p className="text-xs uppercase tracking-[0.2em] text-[#6A6258]">
-              Output
-            </p>
-            <h3 className="mt-4 text-xl font-medium">Decision</h3>
-            <div className="mt-5 space-y-3 text-sm">
-              <div className="rounded-full bg-emerald-100 px-3 py-2 text-emerald-700">
-                Compliant
+          <div className="mt-8 space-y-6">
+            {[
+              ["Evaluates evidence", "Maps vendor assurance evidence to internal controls and requirements."],
+              ["Explains gaps", "Highlights missing, weak, or ambiguous evidence with rationale."],
+              ["Standardizes decisions", "Creates structured findings that teams can review, defend, and audit."],
+            ].map(([title, body]) => (
+              <div key={title} className="border-t border-[#16120F]/10 pt-5">
+                <h3 className="text-lg font-medium">{title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-[#6A6258]">
+                  {body}
+                </p>
               </div>
-              <div className="rounded-full bg-red-100 px-3 py-2 text-red-700">
-                Gap found
-              </div>
-              <div className="rounded-full bg-yellow-100 px-3 py-2 text-yellow-700">
-                Needs review
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
     </div>
 
-    <div className="mt-12 grid gap-5 md:grid-cols-3">
-      {[
-        [
-          "Evidence-aware",
-          "Understands SOC 2 reports, ISO certificates, questionnaires, policies, and vendor assurance materials.",
-        ],
-        [
-          "Control-driven",
-          "Evaluates supplier evidence against your internal controls instead of generic templates.",
-        ],
-        [
-          "Explainable",
-          "Surfaces gaps, rationale, and recommendations your team can review and defend.",
-        ],
-      ].map(([title, body]) => (
-        <div
-          key={title}
-          className="rounded-2xl bg-[#ECE5D8] p-6"
-        >
-          <h3 className="text-lg font-medium">{title}</h3>
-          <p className="mt-3 text-sm leading-relaxed text-[#6A6258]">
-            {body}
-          </p>
-        </div>
-      ))}
+    {/* FLOW GRAPHIC */}
+    <div className="mt-8 rounded-[2rem] border border-[#16120F]/10 bg-[#ECE5D8] p-6 md:p-8">
+      <div className="grid gap-4 md:grid-cols-[1fr_auto_1fr_auto_1fr] md:items-center">
+        {[
+          ["Evidence", "SOC 2, ISO, questionnaires"],
+          ["Controls", "Internal requirements"],
+          ["Decision", "Gaps, rationale, recommendation"],
+        ].map(([title, body], index) => (
+          <div key={title} className="contents">
+            <div className="rounded-2xl bg-white p-5 shadow-sm">
+              <p className="text-xs uppercase tracking-[0.2em] text-[#6A6258]">
+                {index === 0 ? "Input" : index === 1 ? "Mapping" : "Output"}
+              </p>
+              <h3 className="mt-3 text-xl font-medium">{title}</h3>
+              <p className="mt-2 text-sm text-[#6A6258]">{body}</p>
+            </div>
+
+            {index < 2 && (
+              <div className="hidden text-2xl text-[#6A6258] md:block">→</div>
+            )}
+          </div>
+        ))}
+      </div>
     </div>
   </div>
 </section>
