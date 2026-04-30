@@ -186,6 +186,108 @@ export default function Home() {
         </div>
       </section>
 
+{/* WHY SECPROMPT */}
+<section className="border-t border-[#16120F]/10 px-5 py-20 md:px-14 md:py-28">
+  <div className="mx-auto max-w-6xl">
+    <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+      <div>
+        <p className="text-xs uppercase tracking-[0.25em] text-[#6A6258]">
+          Why SecPrompt
+        </p>
+
+        <h2 className="mt-6 text-4xl font-medium leading-tight tracking-[-0.04em] md:text-6xl">
+          Move beyond collecting vendor evidence.
+        </h2>
+
+        <p className="mt-6 text-lg leading-relaxed text-[#6A6258] md:text-xl">
+          Traditional TPRM tools help teams gather documents. SecPrompt helps
+          security and GRC teams understand what those documents mean against
+          internal controls, requirements, and risk expectations.
+        </p>
+      </div>
+
+      {/* GRAPHIC */}
+      <div className="rounded-[2rem] border border-[#16120F]/10 bg-white p-5 shadow-sm">
+        <div className="grid gap-4 md:grid-cols-3">
+          <div className="rounded-2xl bg-[#F5F1E8] p-5">
+            <p className="text-xs uppercase tracking-[0.2em] text-[#6A6258]">
+              Input
+            </p>
+            <h3 className="mt-4 text-xl font-medium">Evidence</h3>
+            <div className="mt-5 space-y-3">
+              <div className="h-3 w-full rounded-full bg-[#16120F]/15" />
+              <div className="h-3 w-4/5 rounded-full bg-[#16120F]/10" />
+              <div className="h-3 w-2/3 rounded-full bg-[#16120F]/10" />
+            </div>
+          </div>
+
+          <div className="rounded-2xl bg-[#16120F] p-5 text-white">
+            <p className="text-xs uppercase tracking-[0.2em] text-white/40">
+              SecPrompt
+            </p>
+            <h3 className="mt-4 text-xl font-medium">AI review</h3>
+            <div className="mt-5 space-y-3">
+              <div className="rounded-full bg-[#B88A55]/30 px-3 py-2 text-xs text-[#F5D7A8]">
+                Extract controls
+              </div>
+              <div className="rounded-full bg-white/10 px-3 py-2 text-xs text-white/70">
+                Compare requirements
+              </div>
+              <div className="rounded-full bg-white/10 px-3 py-2 text-xs text-white/70">
+                Explain findings
+              </div>
+            </div>
+          </div>
+
+          <div className="rounded-2xl bg-[#F5F1E8] p-5">
+            <p className="text-xs uppercase tracking-[0.2em] text-[#6A6258]">
+              Output
+            </p>
+            <h3 className="mt-4 text-xl font-medium">Decision</h3>
+            <div className="mt-5 space-y-3 text-sm">
+              <div className="rounded-full bg-emerald-100 px-3 py-2 text-emerald-700">
+                Compliant
+              </div>
+              <div className="rounded-full bg-red-100 px-3 py-2 text-red-700">
+                Gap found
+              </div>
+              <div className="rounded-full bg-yellow-100 px-3 py-2 text-yellow-700">
+                Needs review
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div className="mt-12 grid gap-5 md:grid-cols-3">
+      {[
+        [
+          "Evidence-aware",
+          "Understands SOC 2 reports, ISO certificates, questionnaires, policies, and vendor assurance materials.",
+        ],
+        [
+          "Control-driven",
+          "Evaluates supplier evidence against your internal controls instead of generic templates.",
+        ],
+        [
+          "Explainable",
+          "Surfaces gaps, rationale, and recommendations your team can review and defend.",
+        ],
+      ].map(([title, body]) => (
+        <div
+          key={title}
+          className="rounded-2xl bg-[#ECE5D8] p-6"
+        >
+          <h3 className="text-lg font-medium">{title}</h3>
+          <p className="mt-3 text-sm leading-relaxed text-[#6A6258]">
+            {body}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
       {/* CTA */}
       <section className="border-t border-[#16120F]/10 px-5 py-20 text-center md:px-14 md:py-28">
         <div className="mx-auto max-w-4xl">
