@@ -50,7 +50,7 @@ export function HeroSection() {
               <div className="relative z-20 mt-9 flex flex-col gap-3 sm:flex-row">
                 <motion.a
                   href="mailto:demo@secprompt.io"
-                  className="relative z-20 inline-flex items-center justify-center gap-2 rounded-xl bg-[#0F1A2E] px-6 py-3.5 font-semibold text-white shadow-lg shadow-gray-900/20 transition-colors hover:bg-[#1a3050]"
+                  className="relative z-20 inline-flex items-center justify-center gap-2 rounded-xl bg-primary-600 px-6 py-3.5 font-semibold text-white opacity-100 shadow-lg shadow-primary-600/20 transition-colors hover:bg-primary-700"
                   whileHover={{ scale: 1.03, y: -2 }}
                   whileTap={{ scale: 0.98 }}
                 >
@@ -59,7 +59,7 @@ export function HeroSection() {
                 </motion.a>
                 <motion.a
                   href="/#capabilities"
-                  className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-[#0F1A2E] bg-white px-6 py-3.5 font-semibold text-[#0F1A2E] shadow-sm transition-colors hover:bg-[#0F1A2E] hover:text-white"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-gray-300 bg-white px-6 py-3.5 font-semibold text-dark-900 shadow-sm transition-colors hover:border-primary-300 hover:text-primary-700"
                   whileHover={{ scale: 1.03, y: -2 }}
                   whileTap={{ scale: 0.98 }}
                 >
