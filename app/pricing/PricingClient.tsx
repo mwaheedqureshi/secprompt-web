@@ -1,17 +1,14 @@
 "use client";
 
-import { useState } from "react";
 import { CheckCircle2 } from "lucide-react";
 
-const appUrl = "http://localhost:3000";
 const assessUrl = "http://localhost:3000/assess";
 const demoUrl = "mailto:demo@secprompt.io";
 
 const plans = [
   {
     name: "STARTER",
-    monthly: "\u00a3299",
-    annual: "\u00a3249",
+    price: "£299",
     suffix: "/month",
     badge: "",
     features: [
@@ -23,12 +20,11 @@ const plans = [
       "PDF report export",
       "Email support",
     ],
-    cta: "Start Free Trial",
+    cta: "Book a Demo",
   },
   {
     name: "GROWTH",
-    monthly: "\u00a3799",
-    annual: "\u00a3649",
+    price: "£799",
     suffix: "/month",
     badge: "MOST POPULAR",
     features: [
@@ -43,12 +39,11 @@ const plans = [
       "Human-in-the-Loop review workflow",
       "Priority support",
     ],
-    cta: "Start Free Trial",
+    cta: "Book a Demo",
   },
   {
     name: "ENTERPRISE",
-    monthly: "Custom",
-    annual: "Custom",
+    price: "Custom",
     suffix: " pricing",
     badge: "",
     features: [
@@ -67,10 +62,6 @@ const plans = [
 ];
 
 const faqs = [
-  {
-    question: "How does the free trial work?",
-    answer: "Full access to the Growth plan for 14 days. No credit card required. Cancel anytime.",
-  },
   {
     question: "What frameworks are supported?",
     answer: "NIST CSF 2.0, ISO 27001:2022, DORA, GDPR, NIST 800-53, and custom baseline controls.",
@@ -95,13 +86,11 @@ const faqs = [
 ];
 
 export default function PricingClient() {
-  const [billing, setBilling] = useState<"monthly" | "annual">("monthly");
-
   return (
     <main className="bg-[#F6F8FC]">
       <section className="px-4 py-20 md:px-8 lg:px-12">
         <div className="mx-auto max-w-7xl">
-          <div className="mx-auto mb-10 max-w-3xl text-center">
+          <div className="mx-auto mb-12 max-w-3xl text-center">
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-primary-600">
               Pricing
             </p>
@@ -109,117 +98,92 @@ export default function PricingClient() {
               Plans for every supplier risk program.
             </h1>
             <p className="mt-5 text-lg leading-8 text-gray-600">
-              Annual plans include two months free. Start with transparent AI assessment and scale into dedicated enterprise deployment.
+              Start with a one-time walk-in assessment or choose a subscription plan that scales with your program.
             </p>
           </div>
 
-          <div className="mb-10 flex items-center justify-center">
-            <div className="inline-flex rounded-2xl border border-gray-200 bg-white p-1 shadow-sm">
-              {(["monthly", "annual"] as const).map((option) => (
-                <button
-                  key={option}
-                  type="button"
-                  onClick={() => setBilling(option)}
-                  className={`rounded-xl px-5 py-2.5 text-sm font-semibold transition-colors ${
-                    billing === option ? "bg-primary-600 text-white" : "text-gray-600 hover:text-primary-700"
-                  }`}
-                >
-                  {option === "monthly" ? "Monthly" : "Annual"}
-                </button>
-              ))}
-            </div>
-          </div>
-          <p className="mb-8 text-center text-sm font-medium text-emerald-700">
-            Annual billing includes 2 months free.
-          </p>
-
-          <div className="mb-8 rounded-3xl border border-primary-200 bg-white/75 p-6 shadow-sm md:p-8">
-            <div className="grid gap-6 lg:grid-cols-[0.8fr_1.2fr_auto] lg:items-center">
+          {/* ONE-TIME WALK-IN CARD */}
+          <div className="mb-8 rounded-3xl bg-[#0F1A2E] p-8 md:p-10">
+            <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)_auto] lg:items-center">
               <div>
-                <p className="mb-3 inline-flex rounded-full bg-primary-50 px-3 py-1 text-[11px] font-bold tracking-[0.18em] text-primary-700">
-                  ONE-TIME
+                <p className="mb-3 text-[11px] font-bold uppercase tracking-[0.22em] text-blue-300">
+                  One-Time Assessment
                 </p>
-                <h2 className="text-2xl font-bold tracking-tight text-dark-900">Single Assessment</h2>
-                <div className="mt-3 flex items-end gap-2">
-                  <span className="text-5xl font-bold text-dark-900">{"\u00a349"}</span>
-                  <span className="pb-2 text-sm font-semibold text-gray-500">one-time</span>
+                <h2 className="text-2xl font-bold tracking-tight text-white md:text-3xl">
+                  Try SecPrompt on a single supplier — no subscription needed
+                </h2>
+                <div className="mt-4 flex items-end gap-2">
+                  <span className="text-6xl font-bold text-white">{"£49"}</span>
+                  <span className="pb-2 text-sm font-medium text-white/60">per assessment</span>
                 </div>
-                <p className="mt-4 text-sm leading-6 text-gray-600">
-                  No account needed. Run one AI assessment, download your PDF, your data deleted immediately.
-                </p>
               </div>
 
-              <div className="grid gap-3 sm:grid-cols-2">
+              <div className="flex flex-wrap gap-x-6 gap-y-3">
                 {[
-                  "Choose from 5 frameworks or Harmonized Controls",
-                  "Upload up to 5 supplier documents",
+                  "5 frameworks or Harmonized Controls",
+                  "Up to 5 supplier documents",
                   "Full AI gap analysis — 60+ controls",
-                  "Downloadable PDF report",
                   "Data permanently deleted after download",
                 ].map((feature) => (
-                  <div key={feature} className="flex gap-3 text-sm leading-6 text-gray-700">
-                    <CheckCircle2 className="mt-0.5 h-4 w-4 flex-none text-emerald-600" />
+                  <div key={feature} className="flex items-center gap-2 text-sm text-white/85">
+                    <CheckCircle2 className="h-4 w-4 flex-none text-emerald-400" />
                     <span>{feature}</span>
                   </div>
                 ))}
               </div>
 
-              <a
-                href={assessUrl}
-                className="inline-flex items-center justify-center rounded-xl bg-dark-900 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-primary-700"
-              >
-                Run Now →
-              </a>
+              <div className="flex flex-col items-start gap-2 lg:items-end">
+                <a
+                  href={assessUrl}
+                  className="inline-flex items-center justify-center whitespace-nowrap rounded-xl bg-white px-7 py-4 text-sm font-bold text-[#0F1A2E] transition-colors hover:bg-gray-100"
+                >
+                  Run a {"£49"} Assessment &rarr;
+                </a>
+                <p className="text-xs text-white/50">No account required. Results in minutes.</p>
+              </div>
             </div>
           </div>
 
+          {/* SUBSCRIPTION TIER CARDS */}
           <div className="grid gap-6 lg:grid-cols-3">
-            {plans.map((plan) => {
-              const price = billing === "annual" ? plan.annual : plan.monthly;
-
-              return (
-                <div
-                  key={plan.name}
-                  className={`relative flex h-full flex-col rounded-2xl border bg-white p-7 shadow-sm ${
-                    plan.badge ? "border-primary-300 shadow-primary-900/10" : "border-gray-200"
+            {plans.map((plan) => (
+              <div
+                key={plan.name}
+                className={`relative flex h-full flex-col rounded-2xl border bg-white p-7 shadow-sm ${
+                  plan.badge ? "border-primary-300 shadow-primary-900/10" : "border-gray-200"
+                }`}
+              >
+                {plan.badge ? (
+                  <div className="absolute right-5 top-5 rounded-full bg-primary-600 px-3 py-1 text-[11px] font-bold tracking-wide text-white">
+                    {plan.badge}
+                  </div>
+                ) : null}
+                <p className="text-sm font-bold tracking-[0.18em] text-gray-500">{plan.name}</p>
+                <div className="mt-6 flex items-end gap-1">
+                  <span className="text-4xl font-bold tracking-tight text-dark-900">{plan.price}</span>
+                  <span className="pb-1 text-sm font-medium text-gray-500">{plan.suffix}</span>
+                </div>
+                <div className="mt-7 space-y-3">
+                  {plan.features.map((feature) => (
+                    <div key={feature} className="flex gap-3 text-sm leading-6 text-gray-700">
+                      <CheckCircle2 className="mt-0.5 h-4 w-4 flex-none text-emerald-600" />
+                      <span>{feature}</span>
+                    </div>
+                  ))}
+                </div>
+                <a
+                  href={demoUrl}
+                  className={`mt-8 inline-flex w-full items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold transition-colors ${
+                    plan.badge
+                      ? "bg-primary-600 text-white hover:bg-primary-700"
+                      : "border border-gray-300 bg-white text-dark-900 hover:border-primary-300 hover:text-primary-700"
                   }`}
                 >
-                  {plan.badge ? (
-                    <div className="absolute right-5 top-5 rounded-full bg-primary-600 px-3 py-1 text-[11px] font-bold tracking-wide text-white">
-                      {plan.badge}
-                    </div>
-                  ) : null}
-                  <p className="text-sm font-bold tracking-[0.18em] text-gray-500">{plan.name}</p>
-                  <div className="mt-6 flex items-end gap-1">
-                    <span className="text-4xl font-bold tracking-tight text-dark-900">{price}</span>
-                    <span className="pb-1 text-sm font-medium text-gray-500">{plan.suffix}</span>
-                  </div>
-                  <div className="mt-7 space-y-3">
-                    {plan.features.map((feature) => (
-                      <div key={feature} className="flex gap-3 text-sm leading-6 text-gray-700">
-                        <CheckCircle2 className="mt-0.5 h-4 w-4 flex-none text-emerald-600" />
-                        <span>{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <a
-                    href={plan.cta === "Contact Sales" ? demoUrl : appUrl}
-                    className={`mt-8 inline-flex w-full items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold transition-colors ${
-                      plan.badge
-                        ? "bg-primary-600 text-white hover:bg-primary-700"
-                        : "border border-gray-300 bg-white text-dark-900 hover:border-primary-300 hover:text-primary-700"
-                    }`}
-                  >
-                    {plan.cta}
-                  </a>
-                </div>
-              );
-            })}
+                  {plan.cta}
+                </a>
+              </div>
+            ))}
           </div>
-
-          <p className="mt-8 text-center text-sm font-medium text-gray-600">
-            All plans include 14-day free trial. No credit card required.
-          </p>
         </div>
       </section>
 
