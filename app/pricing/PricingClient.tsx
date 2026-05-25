@@ -10,7 +10,6 @@ const plans = [
     name: "STARTER",
     price: "£299",
     suffix: "/month",
-    badge: "",
     features: [
       "3 users",
       "10 assessments/month",
@@ -26,7 +25,6 @@ const plans = [
     name: "GROWTH",
     price: "£799",
     suffix: "/month",
-    badge: "MOST POPULAR",
     features: [
       "10 users",
       "50 assessments/month",
@@ -45,7 +43,6 @@ const plans = [
     name: "ENTERPRISE",
     price: "Custom",
     suffix: " pricing",
-    badge: "",
     features: [
       "Unlimited users",
       "Unlimited assessments",
@@ -85,11 +82,20 @@ const faqs = [
   },
 ];
 
+const oneTimeFeatures = [
+  "5 frameworks or Harmonized Controls",
+  "Up to 5 supplier documents",
+  "Full AI gap analysis — 60+ controls",
+  "Data permanently deleted after download",
+];
+
 export default function PricingClient() {
   return (
     <main className="bg-[#F6F8FC]">
       <section className="px-4 py-20 md:px-8 lg:px-12">
         <div className="mx-auto max-w-7xl">
+
+          {/* PAGE HEADER */}
           <div className="mx-auto mb-12 max-w-3xl text-center">
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-primary-600">
               Pricing
@@ -102,44 +108,41 @@ export default function PricingClient() {
             </p>
           </div>
 
-          {/* ONE-TIME WALK-IN CARD */}
-          <div className="mb-8 rounded-3xl bg-[#0F1A2E] p-8 md:p-10">
-            <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)_auto] lg:items-center">
-              <div>
-                <p className="mb-3 text-[11px] font-bold uppercase tracking-[0.22em] text-blue-300">
-                  One-Time Assessment
-                </p>
-                <h2 className="text-2xl font-bold tracking-tight text-white md:text-3xl">
-                  Try SecPrompt on a single supplier — no subscription needed
-                </h2>
-                <div className="mt-4 flex items-end gap-2">
-                  <span className="text-6xl font-bold text-white">{"£49"}</span>
-                  <span className="pb-2 text-sm font-medium text-white/60">per assessment</span>
-                </div>
+          {/* ONE-TIME ASSESSMENT CARD */}
+          <div className="mb-8 overflow-hidden rounded-3xl bg-[#1B2A4A]">
+            <div className="p-8 md:p-10">
+              <p className="mb-3 text-[11px] font-bold uppercase tracking-[0.22em] text-blue-300">
+                One-Time Assessment
+              </p>
+              <h2 className="text-2xl font-bold tracking-tight text-white md:text-3xl">
+                Try SecPrompt on a single supplier
+              </h2>
+              <p className="mt-2 text-base text-white/60">
+                No subscription. No account. Results in minutes.
+              </p>
+
+              <div className="mt-5 flex items-end gap-2">
+                <span className="text-6xl font-bold text-white">£49</span>
+                <span className="pb-2 text-sm font-medium text-white/50">per assessment</span>
               </div>
 
-              <div className="flex flex-wrap gap-x-6 gap-y-3">
-                {[
-                  "5 frameworks or Harmonized Controls",
-                  "Up to 5 supplier documents",
-                  "Full AI gap analysis — 60+ controls",
-                  "Data permanently deleted after download",
-                ].map((feature) => (
-                  <div key={feature} className="flex items-center gap-2 text-sm text-white/85">
+              <div className="mt-7 grid grid-cols-1 gap-3 sm:grid-cols-2">
+                {oneTimeFeatures.map((feature) => (
+                  <div key={feature} className="flex items-center gap-2.5 text-sm text-white/80">
                     <CheckCircle2 className="h-4 w-4 flex-none text-emerald-400" />
                     <span>{feature}</span>
                   </div>
                 ))}
               </div>
 
-              <div className="flex flex-col items-start gap-2 lg:items-end">
+              <div className="mt-8 flex flex-col items-start gap-2">
                 <a
                   href={assessUrl}
-                  className="inline-flex items-center justify-center whitespace-nowrap rounded-xl bg-white px-7 py-4 text-sm font-bold text-[#0F1A2E] transition-colors hover:bg-gray-100"
+                  className="inline-flex items-center justify-center rounded-xl bg-white px-7 py-3.5 text-sm font-bold text-[#1B2A4A] transition-colors hover:bg-gray-100"
                 >
-                  Run a {"£49"} Assessment &rarr;
+                  Run a £49 Assessment →
                 </a>
-                <p className="text-xs text-white/50">No account required. Results in minutes.</p>
+                <p className="text-xs text-white/40">No account required. Results in minutes.</p>
               </div>
             </div>
           </div>
@@ -149,15 +152,8 @@ export default function PricingClient() {
             {plans.map((plan) => (
               <div
                 key={plan.name}
-                className={`relative flex h-full flex-col rounded-2xl border bg-white p-7 shadow-sm ${
-                  plan.badge ? "border-primary-300 shadow-primary-900/10" : "border-gray-200"
-                }`}
+                className="relative flex h-full flex-col rounded-2xl border border-gray-200 bg-white p-7 shadow-sm"
               >
-                {plan.badge ? (
-                  <div className="absolute right-5 top-5 rounded-full bg-primary-600 px-3 py-1 text-[11px] font-bold tracking-wide text-white">
-                    {plan.badge}
-                  </div>
-                ) : null}
                 <p className="text-sm font-bold tracking-[0.18em] text-gray-500">{plan.name}</p>
                 <div className="mt-6 flex items-end gap-1">
                   <span className="text-4xl font-bold tracking-tight text-dark-900">{plan.price}</span>
@@ -173,11 +169,7 @@ export default function PricingClient() {
                 </div>
                 <a
                   href={demoUrl}
-                  className={`mt-8 inline-flex w-full items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold transition-colors ${
-                    plan.badge
-                      ? "bg-primary-600 text-white hover:bg-primary-700"
-                      : "border border-gray-300 bg-white text-dark-900 hover:border-primary-300 hover:text-primary-700"
-                  }`}
+                  className="mt-8 inline-flex w-full items-center justify-center rounded-xl border border-gray-300 bg-white px-5 py-3 text-sm font-semibold text-dark-900 transition-colors hover:border-primary-300 hover:text-primary-700"
                 >
                   {plan.cta}
                 </a>
@@ -187,6 +179,7 @@ export default function PricingClient() {
         </div>
       </section>
 
+      {/* FAQ */}
       <section className="border-t border-gray-200 bg-white px-4 py-20 md:px-8 lg:px-12">
         <div className="mx-auto max-w-4xl">
           <h2 className="mb-8 text-3xl font-bold tracking-tight text-dark-900">Pricing FAQ</h2>
