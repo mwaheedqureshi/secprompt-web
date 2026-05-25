@@ -19,7 +19,6 @@ const plans = [
       "PDF report export",
       "Email support",
     ],
-    cta: "Book a Demo",
   },
   {
     name: "GROWTH",
@@ -37,7 +36,6 @@ const plans = [
       "Human-in-the-Loop review workflow",
       "Priority support",
     ],
-    cta: "Book a Demo",
   },
   {
     name: "ENTERPRISE",
@@ -54,7 +52,6 @@ const plans = [
       "Custom framework integrations",
       "On-premise deployment option",
     ],
-    cta: "Contact Sales",
   },
 ];
 
@@ -82,25 +79,18 @@ const faqs = [
   },
 ];
 
-const oneTimeFeatures = [
-  "5 frameworks or Harmonized Controls",
-  "Up to 5 supplier documents",
-  "Full AI gap analysis — 60+ controls",
-  "Data permanently deleted after download",
-];
-
 export default function PricingClient() {
   return (
-    <main className="bg-[#F6F8FC]">
+    <main className="bg-slate-50 min-h-screen">
       <section className="px-4 py-20 md:px-8 lg:px-12">
-        <div className="mx-auto max-w-7xl">
+        <div className="mx-auto max-w-6xl">
 
           {/* PAGE HEADER */}
           <div className="mx-auto mb-12 max-w-3xl text-center">
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-primary-600">
+            <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-violet-600">
               Pricing
             </p>
-            <h1 className="text-4xl font-bold tracking-tight text-dark-900 md:text-6xl">
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 md:text-5xl">
               Plans for every supplier risk program.
             </h1>
             <p className="mt-5 text-lg leading-8 text-gray-600">
@@ -108,43 +98,48 @@ export default function PricingClient() {
             </p>
           </div>
 
-          {/* ONE-TIME ASSESSMENT CARD */}
-          <div className="mb-8 overflow-hidden rounded-3xl bg-[#1B2A4A]">
-            <div className="p-8 md:p-10">
-              <p className="mb-3 text-[11px] font-bold uppercase tracking-[0.22em] text-blue-300">
-                One-Time Assessment
-              </p>
-              <h2 className="text-2xl font-bold tracking-tight text-white md:text-3xl">
-                Try SecPrompt on a single supplier
-              </h2>
-              <p className="mt-2 text-base text-white/60">
-                No subscription. No account. Results in minutes.
-              </p>
-
-              <div className="mt-5 flex items-end gap-2">
-                <span className="text-6xl font-bold text-white">£49</span>
-                <span className="pb-2 text-sm font-medium text-white/50">per assessment</span>
+          {/* £49 ONE-TIME ASSESSMENT CARD */}
+          <div className="bg-slate-900 rounded-2xl p-8 mb-10 text-white">
+            <p className="text-emerald-400 text-sm font-semibold uppercase tracking-widest mb-2">
+              One-Time Assessment
+            </p>
+            <h3 className="text-2xl font-bold mb-1">
+              Try SecPrompt on a single supplier
+            </h3>
+            <p className="text-slate-300 mb-6">
+              No subscription. No account. Results in minutes.
+            </p>
+            <div className="flex items-baseline gap-1 mb-6">
+              <span className="text-5xl font-bold">£49</span>
+              <span className="text-slate-400">per assessment</span>
+            </div>
+            <div className="grid grid-cols-2 gap-3 mb-8">
+              <div className="flex items-center gap-2 text-sm text-slate-300">
+                <span className="text-emerald-400">✓</span>
+                5 frameworks or Harmonized Controls
               </div>
-
-              <div className="mt-7 grid grid-cols-1 gap-3 sm:grid-cols-2">
-                {oneTimeFeatures.map((feature) => (
-                  <div key={feature} className="flex items-center gap-2.5 text-sm text-white/80">
-                    <CheckCircle2 className="h-4 w-4 flex-none text-emerald-400" />
-                    <span>{feature}</span>
-                  </div>
-                ))}
+              <div className="flex items-center gap-2 text-sm text-slate-300">
+                <span className="text-emerald-400">✓</span>
+                Up to 5 supplier documents
               </div>
-
-              <div className="mt-8 flex flex-col items-start gap-2">
-                <a
-                  href={assessUrl}
-                  className="inline-flex items-center justify-center rounded-xl bg-white px-7 py-3.5 text-sm font-bold text-[#1B2A4A] transition-colors hover:bg-gray-100"
-                >
-                  Run a £49 Assessment →
-                </a>
-                <p className="text-xs text-white/40">No account required. Results in minutes.</p>
+              <div className="flex items-center gap-2 text-sm text-slate-300">
+                <span className="text-emerald-400">✓</span>
+                Full AI gap analysis — 60+ controls
+              </div>
+              <div className="flex items-center gap-2 text-sm text-slate-300">
+                <span className="text-emerald-400">✓</span>
+                Data permanently deleted after download
               </div>
             </div>
+            <a
+              href={assessUrl}
+              className="inline-block bg-white text-slate-900 font-bold px-8 py-3 rounded-lg hover:bg-slate-100 transition-colors"
+            >
+              Run a £49 Assessment →
+            </a>
+            <p className="text-slate-400 text-sm mt-3">
+              No account required. Results in minutes.
+            </p>
           </div>
 
           {/* SUBSCRIPTION TIER CARDS */}
@@ -154,9 +149,9 @@ export default function PricingClient() {
                 key={plan.name}
                 className="relative flex h-full flex-col rounded-2xl border border-gray-200 bg-white p-7 shadow-sm"
               >
-                <p className="text-sm font-bold tracking-[0.18em] text-gray-500">{plan.name}</p>
+                <p className="text-sm font-bold tracking-widest text-gray-500">{plan.name}</p>
                 <div className="mt-6 flex items-end gap-1">
-                  <span className="text-4xl font-bold tracking-tight text-dark-900">{plan.price}</span>
+                  <span className="text-4xl font-bold tracking-tight text-gray-900">{plan.price}</span>
                   <span className="pb-1 text-sm font-medium text-gray-500">{plan.suffix}</span>
                 </div>
                 <div className="mt-7 space-y-3">
@@ -169,9 +164,9 @@ export default function PricingClient() {
                 </div>
                 <a
                   href={demoUrl}
-                  className="mt-8 inline-flex w-full items-center justify-center rounded-xl border border-gray-300 bg-white px-5 py-3 text-sm font-semibold text-dark-900 transition-colors hover:border-primary-300 hover:text-primary-700"
+                  className="mt-8 inline-flex w-full items-center justify-center rounded-xl border border-gray-300 bg-white px-5 py-3 text-sm font-semibold text-gray-900 transition-colors hover:bg-gray-50"
                 >
-                  {plan.cta}
+                  Book a Demo
                 </a>
               </div>
             ))}
@@ -182,11 +177,11 @@ export default function PricingClient() {
       {/* FAQ */}
       <section className="border-t border-gray-200 bg-white px-4 py-20 md:px-8 lg:px-12">
         <div className="mx-auto max-w-4xl">
-          <h2 className="mb-8 text-3xl font-bold tracking-tight text-dark-900">Pricing FAQ</h2>
+          <h2 className="mb-8 text-3xl font-bold tracking-tight text-gray-900">Pricing FAQ</h2>
           <div className="space-y-4">
             {faqs.map((faq) => (
               <div key={faq.question} className="rounded-2xl border border-gray-200 bg-white p-6">
-                <h3 className="font-semibold text-dark-900">{faq.question}</h3>
+                <h3 className="font-semibold text-gray-900">{faq.question}</h3>
                 <p className="mt-2 text-sm leading-6 text-gray-600">{faq.answer}</p>
               </div>
             ))}
