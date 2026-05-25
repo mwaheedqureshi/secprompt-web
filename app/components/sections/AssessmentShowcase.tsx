@@ -143,11 +143,12 @@ export function AssessmentShowcase({ variant = 'hero' }: AssessmentShowcaseProps
 
                 <motion.video
                   className="block h-auto w-full"
-                  style={{ display: 'block', width: '100%' }}
+                  style={{ display: 'block', width: '100%', pointerEvents: 'none' }}
                   autoPlay
                   loop
                   muted
                   playsInline
+                  controls={false}
                   preload={isHero ? 'auto' : 'metadata'}
                   aria-label="Animated SecPrompt 3-way assessment showing requirements, supplier claims, evidence, and AI verdict correlation."
                 >
