@@ -49,7 +49,7 @@ export function HeroSection() {
             <FadeUp delay={0.3}>
               <div className="relative z-20 mt-9 flex flex-col gap-3 sm:flex-row">
                 <motion.a
-                  href="mailto:demo@secprompt.io"
+                  href="/demo"
                   className="relative z-20 inline-flex items-center justify-center gap-2 rounded-xl bg-primary-600 px-6 py-3.5 font-semibold text-white opacity-100 shadow-lg shadow-primary-600/20 transition-colors hover:bg-primary-700"
                   whileHover={{ scale: 1.03, y: -2 }}
                   whileTap={{ scale: 0.98 }}

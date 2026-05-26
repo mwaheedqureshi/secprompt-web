@@ -6,7 +6,7 @@ import { ArrowRight, Menu, X } from "lucide-react";
 import TypingText from "./TypingText";
 
 const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
-const demoUrl = "mailto:demo@secprompt.io";
+const demoUrl = "/demo";
 
 const navLinks = [
   { href: "/#capabilities", label: "Product" },

@@ -28,7 +28,7 @@ export default function MobileNav() {
               {label}
             </a>
           ))}
-          <a href="mailto:demo@secprompt.io" onClick={() => setOpen(false)}
+          <a href="/demo" onClick={() => setOpen(false)}
             className="mt-1 block rounded-xl bg-primary-600 px-4 py-3 text-center text-sm font-semibold text-white">
             Book a demo
           </a>

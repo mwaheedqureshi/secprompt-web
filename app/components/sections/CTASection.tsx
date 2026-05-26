@@ -53,7 +53,7 @@ export function CTASection() {
           viewport={{ once: true }}
         >
           <motion.a
-            href="mailto:demo@secprompt.io"
+            href="/demo"
             className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-8 py-4 font-bold text-primary-600 hover:bg-gray-100 transition-colors shadow-lg"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
@@ -130,7 +130,7 @@ export function EnhancedFooter() {
                 <a href="/security" className="text-gray-600 hover:text-primary-600 transition-colors block">
                   Security
                 </a>
-                <a href="mailto:demo@secprompt.io" className="text-gray-600 hover:text-primary-600 transition-colors block">
+                <a href="/demo" className="text-gray-600 hover:text-primary-600 transition-colors block">
                   Book a Demo
                 </a>
               </div>
