@@ -141,19 +141,23 @@ export function AssessmentShowcase({ variant = 'hero' }: AssessmentShowcaseProps
                   transition={{ duration: 6.5, repeat: Infinity, ease: 'easeInOut' }}
                 />
 
-                <motion.video
-                  className="block h-auto w-full"
-                  style={{ display: 'block', width: '100%', pointerEvents: 'none' }}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  controls={false}
-                  preload={isHero ? 'auto' : 'metadata'}
-                  aria-label="Animated SecPrompt 3-way assessment showing requirements, supplier claims, evidence, and AI verdict correlation."
-                >
-                  <source src={heroVideo} type="video/mp4" />
-                </motion.video>
+                <div style={{ overflow: 'hidden' }}>
+                  <motion.video
+                    className="block h-auto w-full"
+                    style={{ display: 'block', width: '100%', pointerEvents: 'none' }}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    controls={false}
+                    controlsList="nodownload nofullscreen noremoteplayback"
+                    disablePictureInPicture
+                    preload={isHero ? 'auto' : 'metadata'}
+                    aria-label="Animated SecPrompt 3-way assessment showing requirements, supplier claims, evidence, and AI verdict correlation."
+                  >
+                    <source src={heroVideo} type="video/mp4" />
+                  </motion.video>
+                </div>
               </div>
             </div>
 
