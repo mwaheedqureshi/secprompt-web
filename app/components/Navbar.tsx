@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { ArrowRight, Menu, X } from "lucide-react";
+import TypingText from "./TypingText";
 
 const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
 const demoUrl = "mailto:demo@secprompt.io";
@@ -30,6 +31,9 @@ export default function Navbar() {
           </div>
           <span className="mt-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-gray-500">
             AI-Powered TPRM
+          </span>
+          <span className="mt-0.5 text-[10px] font-medium tracking-wide text-emerald-600">
+            <TypingText />
           </span>
         </Link>
 

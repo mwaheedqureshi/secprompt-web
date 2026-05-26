@@ -1,20 +1,25 @@
 "use client";
 import { useEffect, useState } from "react";
 
-const PHRASES = [
-  "AI-powered TPRM",
-  "Human-verified assessments",
-  "Audit-ready risk decisions",
-  "GDPR · DORA · NIST · ISO",
+const DEFAULT_PHRASES = [
+  "solving real problems",
+  "creating real impact",
+  "protecting your business",
+  "know your supplier risk",
 ];
 
-export default function TypingText() {
+type TypingTextProps = {
+  phrases?: string[];
+  className?: string;
+};
+
+export default function TypingText({ phrases = DEFAULT_PHRASES, className = "" }: TypingTextProps) {
   const [phraseIndex, setPhraseIndex] = useState(0);
   const [displayed, setDisplayed] = useState("");
   const [typing, setTyping] = useState(true);
 
   useEffect(() => {
-    const phrase = PHRASES[phraseIndex];
+    const phrase = phrases[phraseIndex];
     let timeout: ReturnType<typeof setTimeout>;
 
     if (typing) {
@@ -27,17 +32,17 @@ export default function TypingText() {
       if (displayed.length > 0) {
         timeout = setTimeout(() => setDisplayed(displayed.slice(0, -1)), 28);
       } else {
-        setPhraseIndex((i) => (i + 1) % PHRASES.length);
+        setPhraseIndex((i) => (i + 1) % phrases.length);
         setTyping(true);
       }
     }
     return () => clearTimeout(timeout);
-  }, [displayed, typing, phraseIndex]);
+  }, [displayed, typing, phraseIndex, phrases]);
 
   return (
-    <span>
+    <span className={className}>
       {displayed}
-      <span className="inline-block w-px h-3 bg-[#6A6258] ml-0.5 animate-[blink_1s_step-end_infinite]" />
+      <span className="inline-block w-px h-2.5 bg-current ml-0.5 animate-[blink_1s_step-end_infinite]" />
     </span>
   );
 }
