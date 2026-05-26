@@ -84,15 +84,17 @@ export function HeroSection() {
                   ))}
                 </div>
                 <div className="mt-6">
-                  <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-gray-500">
-                    Trusted by security teams at:
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {['PostNord', 'FinCorp', 'TechBase', 'SecureNet'].map((company) => (
-                      <span key={company} className="rounded-full border border-gray-200 bg-white px-3 py-1.5 text-xs font-semibold text-gray-500 shadow-sm">
-                        {company}
-                      </span>
-                    ))}
+                  <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-slate-400">Built for compliance teams in</p>
+                  <div className="flex flex-wrap gap-4 text-sm text-slate-500 font-medium">
+                    <span>Financial Services</span>
+                    <span>·</span>
+                    <span>Healthcare</span>
+                    <span>·</span>
+                    <span>Critical Infrastructure</span>
+                    <span>·</span>
+                    <span>Professional Services</span>
+                    <span>·</span>
+                    <span>Logistics</span>
                   </div>
                 </div>
               </div>

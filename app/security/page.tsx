@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export default function SecurityPage() {
   return (
     <main>
@@ -46,8 +44,6 @@ export default function SecurityPage() {
           <h2 className="text-3xl font-medium text-white md:text-4xl mb-10">Certifications and regulatory posture</h2>
           <div className="grid gap-4 md:grid-cols-2">
             {[
-              ["SOC 2 Type II", "Annual SOC 2 Type II audit covering Security, Availability, and Confidentiality trust service criteria. Report available to customers under NDA."],
-              ["ISO 27001:2022", "ISO 27001 certification covering the full information security management system. Certificate available on request."],
               ["GDPR", "Data Processing Agreement available for all customers. Includes all Article 28 provisions, SCCs for international transfers, and DPO contact details."],
               ["DORA readiness", "We support your DORA obligations as a technology provider to financial entities, including contractual ICT provisions and audit rights."],
             ].map(([title, body]) => (
@@ -106,10 +102,10 @@ export default function SecurityPage() {
       <section className="bg-[#F5F1E8] border-t border-[#16120F]/10 px-5 py-20 text-center md:px-14">
         <div className="mx-auto max-w-3xl">
           <h2 className="text-4xl font-medium tracking-[-0.04em] md:text-5xl">Questions about our security posture?</h2>
-          <p className="mt-5 text-lg text-[#6A6258]">Request our SOC 2 report, DPA, or security documentation pack.</p>
-          <Link href="/demo" className="mt-8 inline-block rounded-full bg-[#16120F] px-8 py-4 text-white font-medium hover:bg-[#2a2420] transition-colors">
+          <p className="mt-5 text-lg text-[#6A6258]">Request our DPA, security questionnaire, or documentation pack.</p>
+          <a href="mailto:demo@secprompt.io" className="mt-8 inline-block rounded-full bg-[#16120F] px-8 py-4 text-white font-medium hover:bg-[#2a2420] transition-colors">
             Contact us →
-          </Link>
+          </a>
         </div>
       </section>
 

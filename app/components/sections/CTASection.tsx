@@ -79,8 +79,6 @@ export function CTASection() {
           transition={{ delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <span>✓ SOC 2 Type II Compliant</span>
-          <span className="text-white/40">•</span>
           <span>✓ GDPR Ready</span>
           <span className="text-white/40">•</span>
           <span>✓ Enterprise Support</span>
