@@ -13,8 +13,8 @@ const steps = [
     tone: 'bg-primary-50 text-primary-700 border-primary-200',
   },
   {
-    title: 'Supplier Claim',
-    description: 'Supplier assertion is extracted from questionnaires and reports.',
+    title: 'Supplier Statements',
+    description: 'Supplier responses, attestations, and declarations are collected and catalogued.',
     icon: Database,
     tone: 'bg-violet-50 text-violet-700 border-violet-200',
   },
@@ -25,8 +25,8 @@ const steps = [
     tone: 'bg-cyan-50 text-cyan-700 border-cyan-200',
   },
   {
-    title: 'AI Reasoning',
-    description: 'SecPrompt checks support, gaps, and contradictions.',
+    title: 'Assessment Analysis',
+    description: 'Identifies support, gaps, and contradictions across requirements and evidence.',
     icon: Brain,
     tone: 'bg-amber-50 text-amber-700 border-amber-200',
   },
@@ -62,10 +62,10 @@ export function ThreeWayAssessmentSection() {
         >
           <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-primary-600">Core Differentiator</p>
           <h2 className="text-4xl font-bold tracking-tight text-dark-900 md:text-5xl">
-            The 3-Way Assessment Engine
+            Requirements. Evidence. Decisions.
           </h2>
           <p className="mt-5 text-lg leading-8 text-gray-600">
-            SecPrompt validates a supplier claim only when it can be tied back to your requirement and forward to real evidence. The result is assurance your team can defend.
+            SecPrompt validates supplier statements against your security requirements and submitted evidence to produce explainable findings your team can defend.
           </p>
         </motion.div>
 
@@ -81,7 +81,7 @@ export function ThreeWayAssessmentSection() {
           >
             <div className="mb-5 flex items-center justify-between gap-4">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-widest text-gray-500">Reasoning Flow</p>
+                <p className="text-xs font-semibold uppercase tracking-widest text-gray-500">Assessment Flow</p>
                 <h3 className="mt-1 text-xl font-bold text-dark-900">MFA control verification</h3>
               </div>
               <span className="rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1.5 text-xs font-bold text-emerald-700">

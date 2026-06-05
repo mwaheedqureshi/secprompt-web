@@ -7,30 +7,30 @@ const heroVideo = '/SecPrompt_3way_assessment_animation.mp4';
 
 const metrics = [
   {
-    label: 'Matched',
+    label: 'Supported Controls',
     value: '24',
     detail: 'controls verified',
     className: 'border-emerald-400/40 bg-emerald-400/15 text-emerald-100',
     icon: CheckCircle2,
   },
   {
-    label: 'Partial',
+    label: 'Coverage Gaps',
     value: '7',
     detail: 'need review',
     className: 'border-amber-300/40 bg-amber-300/15 text-amber-100',
     icon: Activity,
   },
   {
-    label: 'Contradictions',
+    label: 'Contradictions Found',
     value: '3',
     detail: 'claim conflicts',
     className: 'border-red-400/40 bg-red-400/15 text-red-100',
     icon: AlertTriangle,
   },
   {
-    label: 'Confidence',
+    label: 'Assessment Confidence',
     value: '92%',
-    detail: 'AI verdict',
+    detail: 'assessment rating',
     className: 'border-cyan-300/40 bg-cyan-300/15 text-cyan-100',
     icon: Gauge,
   },
@@ -107,12 +107,12 @@ export function AssessmentShowcase({ variant = 'hero' }: AssessmentShowcaseProps
               </span>
               <div>
                 <p className="text-xs font-semibold uppercase tracking-widest text-cyan-100/70">SecPrompt Intelligence</p>
-                <p className="text-sm font-semibold text-white">Requirement to claim to evidence</p>
+                <p className="text-sm font-semibold text-white">Explainable Supplier Risk Assessment</p>
               </div>
             </div>
             <div className="hidden items-center gap-2 rounded-full border border-emerald-300/30 bg-emerald-300/10 px-3 py-1.5 text-xs font-semibold text-emerald-100 sm:flex">
               <span className="h-2 w-2 rounded-full bg-emerald-300 shadow-[0_0_12px_rgba(110,231,183,.9)]" />
-              AI verdict ready
+              Assessment ready
             </div>
           </div>
 
@@ -153,7 +153,7 @@ export function AssessmentShowcase({ variant = 'hero' }: AssessmentShowcaseProps
                     controlsList="nodownload nofullscreen noremoteplayback"
                     disablePictureInPicture
                     preload={isHero ? 'auto' : 'metadata'}
-                    aria-label="Animated SecPrompt 3-way assessment showing requirements, supplier claims, evidence, and AI verdict correlation."
+                    aria-label="Animated SecPrompt assessment showing requirements, supplier statements, evidence review, and explainable assessment outcomes."
                   >
                     <source src={heroVideo} type="video/mp4" />
                   </motion.video>
@@ -187,7 +187,7 @@ export function AssessmentShowcase({ variant = 'hero' }: AssessmentShowcaseProps
           </div>
 
           <div className="relative z-20 grid gap-3 border-t border-white/10 bg-black/20 p-4 backdrop-blur-xl md:grid-cols-3 md:p-6">
-            {['Requirements normalized', 'Claims challenged', 'Evidence traced'].map((label, index) => (
+            {['Evidence Validated', 'Claims Verified', 'Audit Ready'].map((label, index) => (
               <motion.div
                 key={label}
                 className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.06] px-4 py-3"

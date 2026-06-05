@@ -125,7 +125,7 @@ export function EnhancedFooter() {
                   Features
                 </a>
                 <a href="#assessment" className="text-gray-600 hover:text-primary-600 transition-colors block">
-                  3-Way Assessment
+                  Assessment Process
                 </a>
                 <a href="/security" className="text-gray-600 hover:text-primary-600 transition-colors block">
                   Security

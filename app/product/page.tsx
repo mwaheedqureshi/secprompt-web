@@ -34,11 +34,11 @@ const FEATURES = [
     title: "Semantic matching, not keyword search.",
     body: "SecPrompt understands the meaning of evidence — distinguishing third-party verified controls from self-reported assertions, current state from future plans, and full scope coverage from partial.",
     detail: [
-      "Semantic vector search matches evidence to requirements",
+      "Assessment matching links evidence to requirements",
       "Confidence scoring on every finding",
       "Gap type classification: missing, partial, future plan, contradictory",
       "Evidence credibility weighting by document type",
-      "Full AI reasoning shown for every determination",
+      "Full assessment rationale shown for every determination",
       "Cross-framework gap mapping",
     ],
   },

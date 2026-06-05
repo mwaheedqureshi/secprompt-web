@@ -26,7 +26,7 @@ export function WorkflowSection() {
       num: 3,
       title: 'Verify Evidence',
       description:
-        'SecPrompt AI cross-references claims against evidence. Detects gaps, contradictions, confidence scores.',
+        'Evidence is reviewed and cross-referenced against requirements. Gaps, contradictions, and unsupported claims are identified.',
       icon: FileSearch,
       color: 'from-amber-500 to-amber-600',
     },

@@ -18,7 +18,7 @@ export default function Home() {
       {/* AI Differentiation - Dark section with 3 core differentiators */}
       <AIDifferentiationSection />
 
-      {/* 3-Way Assessment Engine - Core technology showcase with GIF + breakdown */}
+      {/* Evidence Assessment Engine - Core technology showcase with GIF + breakdown */}
       <ThreeWayAssessmentSection />
 
       {/* Capabilities Grid - 8 enterprise features */}

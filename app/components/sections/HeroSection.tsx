@@ -28,7 +28,7 @@ export function HeroSection() {
                 <span className="flex h-6 w-6 items-center justify-center rounded-full bg-primary-600 text-white">
                   <ShieldCheck className="h-3.5 w-3.5" />
                 </span>
-                AI-powered supplier assurance reasoning
+                AI-assisted supplier risk assessment
               </motion.div>
             </FadeUp>
 
@@ -73,7 +73,7 @@ export function HeroSection() {
               <div className="mt-10 max-w-xl">
                 <div className="grid grid-cols-3 gap-3">
                   {[
-                    ['24', 'matched controls'],
+                    ['24', 'supported controls'],
                     ['3', 'contradictions'],
                     ['92%', 'confidence'],
                   ].map(([value, label]) => (

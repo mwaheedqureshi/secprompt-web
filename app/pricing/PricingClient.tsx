@@ -15,7 +15,7 @@ const plans = [
       "10 assessments/month",
       "5 frameworks (NIST CSF, ISO 27001, DORA, GDPR, NIST 800-53)",
       "AI gap analysis (met/partial/gap per control)",
-      "3-way transparent assessment view",
+      "Transparent evidence-based assessment view",
       "PDF report export",
       "Email support",
     ],
@@ -76,9 +76,9 @@ const faqs = [
     answer: "Yes, PDF reports on all plans. CSV export of risk register on Growth and above.",
   },
   {
-    question: "What is the 3-way assessment?",
+    question: "How does SecPrompt validate supplier claims?",
     answer:
-      "SecPrompt validates each control by cross-referencing the security requirement, the supplier's claim, and the independent evidence, showing you exactly why a control passed or failed, with document references.",
+      "SecPrompt validates each control by cross-referencing your security requirements, the supplier's statements, and the submitted evidence — showing you exactly why a control is supported, partially supported, or contradicted, with full document references.",
   },
 ];
 
@@ -116,9 +116,9 @@ export default function PricingClient() {
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   {[
-                    '5 frameworks or Harmonized Controls',
+                    '5 frameworks or Unified Control Library',
                     'Up to 5 supplier documents',
-                    'Full AI gap analysis — 60+ controls',
+                    'Full gap analysis — 60+ controls',
                     'Data permanently deleted after download',
                   ].map(f => (
                     <div key={f} className="flex items-center gap-2 text-sm text-slate-300">
