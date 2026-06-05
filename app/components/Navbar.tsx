@@ -10,8 +10,7 @@ const demoUrl = "/demo";
 
 const navLinks = [
   { href: "/#capabilities", label: "Product" },
-  { href: "/#assessment", label: "Solutions" },
-  { href: "/pricing", label: "Pricing" },
+  { href: "/methodology", label: "Methodology" },
   { href: "/#security", label: "Security" },
   { href: "/demo", label: "Company" },
 ];
