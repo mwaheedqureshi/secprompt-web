@@ -16,58 +16,58 @@ export function CapabilitiesGridSection() {
   const capabilities = [
     {
       icon: Brain,
-      title: '3-Way AI Assessment',
+      title: 'Evidence-Based Assessment',
       description:
-        'Requirement to claim to evidence reasoning engine powered by language models',
+        'Validates supplier requirements, supplier statements, and supporting evidence to produce explainable assessment outcomes.',
       color: 'from-purple-500 to-purple-600',
     },
     {
       icon: GitBranch,
-      title: 'Harmonized Control Graph',
+      title: 'Unified Control Library',
       description:
-        'Universal control mapping across NIST, ISO, SOC2, GDPR, DORA, PCI, and more',
+        'Normalize and map requirements across security, privacy, and regulatory frameworks.',
       color: 'from-blue-500 to-blue-600',
     },
     {
       icon: FileText,
-      title: 'OCR + Evidence Intelligence',
+      title: 'Evidence Intelligence',
       description:
-        'Extract structured claims from unstructured PDF reports and documents',
+        'Automatically identifies relevant evidence, supporting artifacts, and assessment inputs from supplier documentation.',
       color: 'from-amber-500 to-amber-600',
     },
     {
       icon: Users,
       title: 'Human-in-the-Loop Review',
       description:
-        'Mandatory analyst validation before any risk finding reaches your register',
+        'Analyst validation and approval before findings become actionable risks.',
       color: 'from-emerald-500 to-emerald-600',
     },
     {
       icon: AlertTriangle,
       title: 'AI Risk Reasoning',
       description:
-        'Detect contradictions, gaps, and unsupported assurances with reasoning explanations',
+        'Validates evidence, identifies gaps, and detects contradictions across supplier documentation.',
       color: 'from-red-500 to-red-600',
     },
     {
       icon: GitBranch,
       title: 'Framework Mapping',
       description:
-        'One evidence set covers multiple compliance obligations simultaneously',
+        'Reuse evidence across multiple frameworks including ISO 27001, NIST, DORA, PCI DSS, and GDPR.',
       color: 'from-cyan-500 to-cyan-600',
     },
     {
       icon: TrendingUp,
-      title: 'Evidence Confidence Engine',
+      title: 'Assessment Confidence',
       description:
-        'Statistical scoring of claim validity based on evidence strength and consistency',
+        'Transparent confidence indicators help reviewers understand the reliability of assessment outcomes.',
       color: 'from-green-500 to-green-600',
     },
     {
       icon: CheckSquare,
       title: 'Audit-Ready Reporting',
       description:
-        'Complete decision trail, reasoning, and evidence traceability for auditors',
+        'Evidence traceability, decision history, and assessment rationale in every report.',
       color: 'from-indigo-500 to-indigo-600',
     },
   ];
