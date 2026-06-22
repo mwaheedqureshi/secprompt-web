@@ -35,7 +35,7 @@ export default function DemoPage() {
               Book a 30-minute demo. We&apos;ll run a live assessment of one of your suppliers using your real documents.
             </p>
 
-            <div className="mt-10">
+            <div id="contact" className="mt-10 scroll-mt-28">
               <DemoForm />
             </div>
           </div>

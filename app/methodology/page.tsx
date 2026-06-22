@@ -28,7 +28,7 @@ const trustCards = [
     icon: UserCheck,
     title: 'Human Reviewed',
     description:
-      'AI recommendations support human decision making. Final decisions stay with your team.',
+      'Structured findings support human decision making. Final decisions stay with your team.',
   },
   {
     icon: ClipboardCheck,
@@ -40,16 +40,22 @@ const trustCards = [
 
 const frameworks = [
   {
-    name: 'ISO 27005',
-    subtitle: 'Information Security Risk Management',
-    description:
-      'Risk evaluation and residual risk concepts aligned with international standards.',
-  },
-  {
     name: 'NIST CSF 2.0',
     subtitle: 'Cybersecurity Framework',
     description:
       'Control coverage and cybersecurity governance mapped to the NIST framework functions.',
+  },
+  {
+    name: 'NIST 800-53',
+    subtitle: 'Security and Privacy Controls',
+    description:
+      'Detailed security and privacy control requirements for structured supplier assessments.',
+  },
+  {
+    name: 'ISO 27001',
+    subtitle: 'Information Security Management',
+    description:
+      'Information security management requirements for evaluating supplier control maturity.',
   },
   {
     name: 'DORA',
@@ -58,10 +64,10 @@ const frameworks = [
       'Operational resilience and third-party oversight for financial services compliance.',
   },
   {
-    name: 'ISF',
-    subtitle: 'Information Security Forum',
+    name: 'GDPR',
+    subtitle: 'Data Protection',
     description:
-      'Evidence quality and assurance confidence aligned with ISF Good Practice guidelines.',
+      'Data protection obligations for processor oversight, security measures, and accountability.',
   },
 ];
 
@@ -82,25 +88,25 @@ const flowSteps = [
     step: '03',
     label: 'Evidence Review',
     description:
-      'AI-assisted analysis of submitted evidence documents, certificates, and supporting materials.',
+      'Review submitted evidence documents, certificates, and supporting materials for claim support and completeness.',
   },
   {
     step: '04',
     label: 'Contradiction Detection',
     description:
-      'Automated identification of conflicts between supplier claims and documented evidence.',
+      'Identify conflicts between supplier claims and documented evidence.',
   },
   {
     step: '05',
     label: 'Risk Evaluation',
     description:
-      'Residual risk scoring based on evidence quality, coverage gaps, and contradiction severity.',
+      'Risk evaluation based on evidence quality, coverage gaps, and contradiction severity.',
   },
   {
     step: '06',
     label: 'Human Review',
     description:
-      'Qualified assessors review AI outputs, validate findings, and apply professional judgement.',
+      'Qualified assessors review findings, validate conclusions, and apply professional judgement.',
   },
   {
     step: '07',
@@ -112,7 +118,7 @@ const flowSteps = [
 
 const claimValidations = [
   { claim: 'MFA enabled across all systems', result: 'Partially Supported', status: 'partial' },
-  { claim: 'DORA aligned', result: 'Not Supported', status: 'unsupported' },
+  { claim: 'DORA ICT register maintained', result: 'Partially Supported', status: 'partial' },
   { claim: 'Patching within 30 days', result: 'Contradicted', status: 'contradicted' },
   { claim: 'EU Data Residency', result: 'Partially Supported', status: 'partial' },
 ];
@@ -216,8 +222,8 @@ export default function MethodologyPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            SecPrompt combines AI-assisted evidence analysis, supplier claim validation,
-            contradiction detection, and human review to produce transparent and auditable
+            SecPrompt combines evidence review, supplier claim validation, assessment confidence,
+            traceability, and human review to produce transparent and auditable
             third-party risk assessments.
           </motion.p>
 
@@ -228,14 +234,14 @@ export default function MethodologyPage() {
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <Link
-              href="/demo"
+              href="/demo#contact"
               className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary-600 px-8 py-4 font-semibold text-white shadow-lg shadow-primary-600/20 transition-colors hover:bg-primary-700"
             >
               View Sample Assessment
               <ArrowRight className="h-5 w-5" />
             </Link>
             <Link
-              href="/demo"
+              href="/demo#contact"
               className="inline-flex items-center justify-center gap-2 rounded-xl border border-gray-300 bg-white px-8 py-4 font-semibold text-dark-900 transition-colors hover:border-primary-300 hover:text-primary-700"
             >
               Book a Demo
@@ -341,8 +347,8 @@ export default function MethodologyPage() {
           >
             <p className="text-sm leading-7 text-primary-800">
               <span className="font-semibold">Note: </span>
-              SecPrompt incorporates concepts from these frameworks while extending them through
-              AI-assisted evidence validation and contradiction analysis. SecPrompt is not a
+              SecPrompt supports assessment alignment for the frameworks shown above while applying
+              evidence review, claim validation, and contradiction analysis. SecPrompt is not a
               certification provider and does not issue compliance certifications.
             </p>
           </motion.div>
@@ -528,15 +534,15 @@ export default function MethodologyPage() {
                 Human Governance
               </p>
               <h2 className="mb-6 text-3xl font-bold text-dark-900 md:text-4xl">
-                AI-Assisted, Human Governed
+                Evidence Review, Human Governed
               </h2>
               <p className="mb-6 text-lg leading-8 text-gray-600">
-                SecPrompt accelerates assessments but keeps humans in control of final decisions,
+                SecPrompt structures assessment evidence but keeps humans in control of final decisions,
                 risk acceptance, escalation, and remediation tracking.
               </p>
               <p className="text-base leading-7 text-gray-500">
-                AI processes evidence at scale — identifying patterns, surfacing contradictions,
-                and scoring confidence. Human assessors then review, validate, challenge, and
+                SecPrompt reviews evidence at scale, surfacing contradictions,
+                and showing confidence drivers. Human assessors then review, validate, challenge, and
                 approve every final recommendation. No risk decision is made without human
                 oversight.
               </p>
@@ -551,14 +557,13 @@ export default function MethodologyPage() {
             >
               <div className="rounded-2xl border-2 border-secondary-200 bg-secondary-50 p-6">
                 <div className="mb-3 flex items-center justify-between">
-                  <span className="text-lg font-bold text-secondary-800">AI</span>
+                  <span className="text-lg font-bold text-secondary-800">Platform</span>
                   <span className="rounded-full bg-secondary-200 px-3 py-1 text-xs font-semibold text-secondary-800">
                     Accelerates
                   </span>
                 </div>
                 <p className="text-sm leading-6 text-secondary-700">
-                  Evidence analysis, claim matching, contradiction detection, and confidence
-                  scoring — processed at scale across all submitted documents.
+                  Evidence review, claim matching, contradiction detection, and confidence`r`n                  indicators across submitted documents.
                 </p>
               </div>
               <div className="rounded-2xl border-2 border-primary-200 bg-primary-50 p-6">
@@ -607,7 +612,7 @@ export default function MethodologyPage() {
                 document.
               </p>
               <Link
-                href="/demo"
+                href="/demo#contact"
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary-600 px-8 py-4 font-semibold text-white shadow-lg shadow-primary-600/20 transition-colors hover:bg-primary-700"
               >
                 Request Whitepaper

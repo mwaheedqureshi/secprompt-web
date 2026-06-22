@@ -2,41 +2,41 @@
 
 const FEATURES = [
   {
-    tag: "Control library",
-    title: "Build your security baseline from any source.",
-    body: "Upload internal policies, regulatory documents, or select from built-in frameworks. SecPrompt extracts and normalises every control into a unified library your team owns and governs.",
+    tag: "Requirements",
+    title: "Define what suppliers need to prove.",
+    body: "Upload internal policies, regulatory documents, or select from officially supported frameworks. SecPrompt turns them into a unified control library your team owns and governs.",
     detail: [
       "Upload PDF, DOCX, XLSX, CSV, or plain text",
-      "AI extracts controls with title, domain, mandatory level, and tags",
+      "Structure controls with title, domain, mandatory level, and tags",
       "Human review and approval before publishing",
-      "Version-controlled — every change tracked",
-      "Merge multiple frameworks into one library",
+      "Version-controlled - every change tracked",
+      "Map supported frameworks into one assessment baseline",
       "Search and filter across thousands of controls",
     ],
-    frameworks: ["NIST CSF v2.0", "ISO 27001:2022", "GDPR", "DORA", "SOC 2 TSC", "CIS Controls v8", "NIS2", "PCI DSS v4", "Custom policies"],
+    frameworks: ["NIST CSF 2.0", "NIST 800-53", "ISO 27001", "DORA", "GDPR"],
   },
   {
-    tag: "Evidence extraction",
-    title: "Every supplier document, fully analysed.",
-    body: "Upload SOC 2 reports, RFP responses, penetration test reports, ISO certificates, and security questionnaires. SecPrompt reads them all simultaneously — not just the headline certification.",
+    tag: "Evidence review",
+    title: "Review the documents behind supplier claims.",
+    body: "Upload independent audit reports, RFP responses, penetration test reports, ISO certificates, and security questionnaires. SecPrompt evaluates the supporting materials behind supplier assertions, not just the headline certification.",
     detail: [
-      "SOC 2 Type I & Type II reports",
+      "Independent audit and assurance reports",
       "RFP and security questionnaire responses",
       "Penetration test reports and findings",
       "ISO 27001 certificates and statements of applicability",
       "Incident response and business continuity plans",
       "Architecture and data flow diagrams",
     ],
-    evidence_types: ["SOC 2 Type II", "Pentest reports", "RFP responses", "ISO certificates", "BCP / IR plans"],
+    evidence_types: ["Audit reports", "Pentest reports", "RFP responses", "ISO certificates", "BCP / IR plans"],
   },
   {
-    tag: "Gap analysis",
-    title: "Semantic matching, not keyword search.",
-    body: "SecPrompt understands the meaning of evidence — distinguishing third-party verified controls from self-reported assertions, current state from future plans, and full scope coverage from partial.",
+    tag: "Claim validation",
+    title: "Validate support, not keywords.",
+    body: "SecPrompt distinguishes third-party verified controls from self-reported assertions, current state from future plans, and full scope coverage from partial coverage.",
     detail: [
-      "Assessment matching links evidence to requirements",
-      "Confidence scoring on every finding",
-      "Gap type classification: missing, partial, future plan, contradictory",
+      "Assessment matching links claims and evidence to requirements",
+      "Confidence indicators on every finding",
+      "Finding classification: supported, partial, missing, future plan, contradictory",
       "Evidence credibility weighting by document type",
       "Full assessment rationale shown for every determination",
       "Cross-framework gap mapping",
@@ -45,20 +45,20 @@ const FEATURES = [
   {
     tag: "Human review workflow",
     title: "Structured oversight at every confidence level.",
-    body: "No finding reaches your risk register without the right level of human review. Auto-publish high-confidence findings, route medium-confidence to analysts, and escalate critical gaps to senior reviewers.",
+    body: "No finding reaches your risk register without the right level of human review. Route medium-confidence findings to analysts, escalate critical gaps to senior reviewers, and preserve the review trail.",
     detail: [
-      "Auto-publish findings with ≥90% confidence",
+      "Prioritize findings by confidence and evidence quality",
       "Analyst review queue for medium-confidence findings",
       "Senior escalation for low-confidence or critical gaps",
       "Approve, reject, or request more information",
-      "Edit AI findings before finalising",
+      "Edit findings before finalising",
       "Every decision logged with timestamp and user",
     ],
   },
   {
     tag: "Risk register",
     title: "From gap to action in one workflow.",
-    body: "Approved findings become risk register entries automatically — with severity, due dates, supplier-specific questions, and remediation recommendations. Grouped by supplier for executive reporting.",
+    body: "Approved findings become risk register entries with severity, due dates, supplier-specific questions, and remediation recommendations. Grouped by supplier for executive reporting.",
     detail: [
       "Risk codes with full traceability to source evidence",
       "Severity classification: Critical, High, Medium, Low",
@@ -73,21 +73,18 @@ const FEATURES = [
 export default function ProductPage() {
   return (
     <main>
-
-      {/* HERO */}
       <section className="bg-[#F5F1E8] px-5 pt-16 pb-20 md:px-14 md:pt-24">
         <div className="mx-auto max-w-6xl">
           <p className="text-xs uppercase tracking-[0.25em] text-[#6A6258]">Product</p>
           <h1 className="mt-5 text-5xl font-medium leading-[1.05] tracking-[-0.04em] md:text-7xl max-w-4xl">
-            Built for the reality of enterprise third party risk.
+            Built for evidence-based supplier assessment.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-[#6A6258] leading-relaxed">
-            Every feature in SecPrompt exists to solve a specific problem that security and GRC teams face every day — manual document review, inconsistent findings, no audit trail, and regulatory pressure that never eases.
+            Every feature in SecPrompt helps security and GRC teams validate supplier claims, review supporting documentation, explain findings, and preserve the audit trail regulators and internal stakeholders expect.
           </p>
         </div>
       </section>
 
-      {/* FEATURES */}
       <section className="bg-[#16120F] px-5 py-20 md:px-14 md:py-28">
         <div className="mx-auto max-w-6xl space-y-28">
           {FEATURES.map(({ tag, title, body, detail, frameworks, evidence_types }, i) => (
@@ -137,14 +134,14 @@ export default function ProductPage() {
                   <div className="space-y-3">
                     <div className="rounded-xl bg-white/04 p-4">
                       <div className="flex items-center justify-between mb-3">
-                        <p className="text-xs text-[#6A6258] uppercase tracking-widest">Coverage score</p>
+                        <p className="text-xs text-[#6A6258] uppercase tracking-widest">Evidence coverage</p>
                         <span className="text-lg font-medium text-white">72%</span>
                       </div>
                       <div className="h-1.5 w-full rounded-full bg-white/08">
                         <div className="h-1.5 w-[72%] rounded-full bg-white/60" />
                       </div>
                     </div>
-                    {[["Met", "18", "text-emerald-400"], ["Partial", "7", "text-yellow-400"], ["Gap", "9", "text-red-400"]].map(([label, count, color]) => (
+                    {[["Supported", "18", "text-emerald-400"], ["Partial", "7", "text-yellow-400"], ["Gap", "9", "text-red-400"]].map(([label, count, color]) => (
                       <div key={label} className="flex justify-between rounded-xl bg-white/04 px-4 py-3 text-sm">
                         <span className="text-[#9A9289]">{label}</span>
                         <span className={`font-medium ${color}`}>{count}</span>
@@ -158,17 +155,15 @@ export default function ProductPage() {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="bg-[#F5F1E8] border-t border-[#16120F]/10 px-5 py-20 text-center md:px-14 md:py-28">
         <div className="mx-auto max-w-3xl">
           <h2 className="text-4xl font-medium tracking-[-0.04em] md:text-6xl">See it working on a real assessment.</h2>
-          <p className="mt-5 text-lg text-[#6A6258]">Book a demo and we will run a live analysis on a supplier document you choose.</p>
-          <a href="mailto:demo@secprompt.io" className="mt-8 inline-block rounded-full bg-[#16120F] px-8 py-4 text-white font-medium hover:bg-[#2a2420] transition-colors">
-            Book a demo →
+          <p className="mt-5 text-lg text-[#6A6258]">Book a demo and we will run a live review on a supplier document you choose.</p>
+          <a href="/demo#contact" className="mt-8 inline-block rounded-full bg-[#16120F] px-8 py-4 text-white font-medium hover:bg-[#2a2420] transition-colors">
+            Book a demo
           </a>
         </div>
       </section>
-
     </main>
   );
 }

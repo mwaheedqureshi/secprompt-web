@@ -8,33 +8,33 @@ export function WorkflowSection() {
   const steps = [
     {
       num: 1,
-      title: 'Define Controls',
+      title: 'Define Requirements',
       description:
-        'Map your security requirements to frameworks. Establish baseline controls and obligations.',
+        'Assess suppliers against your internal controls, regulatory obligations, or industry frameworks.',
       icon: CheckCircle2,
       color: 'from-blue-500 to-blue-600',
     },
     {
       num: 2,
-      title: 'Collect Claims',
+      title: 'Review Supplier Evidence',
       description:
-        'Suppliers submit SOC 2 reports, ISO certificates, RFP responses, and audit findings.',
+        'Upload questionnaires, audit reports, certifications, policies, and supporting documents.',
       icon: Send,
       color: 'from-purple-500 to-purple-600',
     },
     {
       num: 3,
-      title: 'Verify Evidence',
+      title: 'Validate Claims',
       description:
-        'Evidence is reviewed and cross-referenced against requirements. Gaps, contradictions, and unsupported claims are identified.',
+        'Compare supplier statements against available evidence and identify unsupported or partially supported assertions.',
       icon: FileSearch,
       color: 'from-amber-500 to-amber-600',
     },
     {
       num: 4,
-      title: 'Generate Assurance',
+      title: 'Generate Explainable Assessments',
       description:
-        'Human-reviewed findings deliver audit-ready risk decisions to your compliance register.',
+        'Produce findings, risk summaries, and recommendations with clear evidence traceability.',
       icon: ClipboardCheck,
       color: 'from-emerald-500 to-emerald-600',
     },
@@ -58,13 +58,13 @@ export function WorkflowSection() {
           viewport={{ once: true }}
         >
           <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-primary-600">
-            Enterprise Workflow
+            Assessment Workflow
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-dark-900 mb-4">
-            Four Steps to Verified Assurance
+            From Requirements to Assessment Outcomes
           </h2>
           <p className="max-w-2xl mx-auto text-lg text-gray-600">
-            From supplier claims to audit-ready risk decisions in one integrated workflow
+            Requirements, supplier claims, supporting evidence, and assessment outcomes in one traceable flow
           </p>
         </motion.div>
 
@@ -154,15 +154,15 @@ export function WorkflowSection() {
               Result
             </p>
             <h3 className="text-2xl md:text-3xl font-bold text-dark-900 mb-3">
-              Audit-Ready Risk Decisions
+              Audit-Ready Assessment Outcomes
             </h3>
             <p className="max-w-3xl mx-auto text-gray-700 mb-4">
-              Every assessment generates a complete decision trail, reasoning documentation, and evidence
-              traceability that satisfies internal audit, compliance reviews, and board requirements.
+              Every assessment generates a complete decision trail, evidence quality indicators,
+              and traceability that supports procurement, risk, security, and audit stakeholders.
             </p>
             <div className="flex items-center justify-center gap-2 text-sm font-semibold text-primary-600">
               <CheckCircle2 className="h-5 w-5" />
-              Production-ready in weeks, not months
+              Consistent reviews without relying solely on self-attestation
             </div>
           </motion.div>
         </StaggerContainer>

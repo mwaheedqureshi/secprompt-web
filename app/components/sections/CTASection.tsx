@@ -41,7 +41,7 @@ export function CTASection() {
           viewport={{ once: true }}
         >
           Join enterprise security teams using SecPrompt to transform third-party risk
-          management from reactive questionnaires to intelligent, evidence-based assurance.
+          management from questionnaire collection to evidence-based supplier assurance.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -53,7 +53,7 @@ export function CTASection() {
           viewport={{ once: true }}
         >
           <motion.a
-            href="/demo"
+            href="/demo#contact"
             className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-8 py-4 font-bold text-primary-600 hover:bg-gray-100 transition-colors shadow-lg"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
@@ -62,12 +62,12 @@ export function CTASection() {
             <ArrowRight className="h-5 w-5" />
           </motion.a>
           <motion.a
-            href="/product"
+            href="/demo#contact"
             className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-white px-8 py-4 font-bold text-white hover:bg-white/10 transition-colors"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
           >
-            Explore Platform
+            Run an Assessment
           </motion.a>
         </motion.div>
 
@@ -110,7 +110,7 @@ export function EnhancedFooter() {
                 <span className="text-lg font-bold text-dark-900">SecPrompt</span>
               </div>
               <p className="text-sm text-gray-600 max-w-xs mb-4 leading-relaxed">
-                AI-powered third party risk management. Human-verified. Audit-ready.
+                Evidence-based supplier assessment. Explainable. Audit-ready.
               </p>
 
             </motion.div>
@@ -130,7 +130,7 @@ export function EnhancedFooter() {
                 <a href="/security" className="text-gray-600 hover:text-primary-600 transition-colors block">
                   Security
                 </a>
-                <a href="/demo" className="text-gray-600 hover:text-primary-600 transition-colors block">
+                <a href="/demo#contact" className="text-gray-600 hover:text-primary-600 transition-colors block">
                   Book a Demo
                 </a>
               </div>

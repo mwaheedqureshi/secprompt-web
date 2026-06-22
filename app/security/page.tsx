@@ -26,7 +26,7 @@ export default function SecurityPage() {
               ["Encryption in transit", "TLS 1.2 minimum enforced for all data in transit. TLS 1.0 and 1.1 are disabled. Certificate management uses automatic renewal."],
               ["Data residency", "EU customer data is stored and processed exclusively within the European Union. We provide contractual data residency commitments."],
               ["Data deletion", "Customer data is securely deleted within 30 days of contract termination. Cryptographic erasure is used for encrypted data stores. Certificate of deletion provided on request."],
-              ["No AI training on your data", "Your assessment data, supplier documents, and findings are never used to train AI models. Your data is yours."],
+              ["No model training on your data", "Your assessment data, supplier documents, and findings are never used for model training. Your data is yours."],
             ].map(([title, body]) => (
               <div key={title as string} className="rounded-2xl border border-white/08 bg-[#1E1A16] p-6">
                 <h3 className="text-base font-semibold text-white mb-3">{title}</h3>
@@ -90,10 +90,10 @@ export default function SecurityPage() {
           <p className="text-xs uppercase tracking-[0.25em] text-[#6A6258] mb-4">Responsible disclosure</p>
           <h2 className="text-2xl font-medium text-white mb-4">Found a vulnerability?</h2>
           <p className="text-[#9A9289] text-base leading-relaxed mb-6">
-            We operate a responsible disclosure programme. Security researchers can report vulnerabilities to our security team. We commit to acknowledging reports within 2 business days and providing a remediation timeline within 10 business days.
+            We operate a responsible disclosure programme. Security researchers can submit security enquiries through the contact form by selecting Security Inquiry. We commit to acknowledging reports within 2 business days and providing a remediation timeline within 10 business days.
           </p>
-          <a href="mailto:security@secprompt.io" className="inline-block rounded-full border border-white/20 px-6 py-2.5 text-sm text-white hover:bg-white/05 transition-colors">
-            security@secprompt.io
+          <a href="/demo#contact" className="inline-block rounded-full border border-white/20 px-6 py-2.5 text-sm text-white hover:bg-white/05 transition-colors">
+            Submit security inquiry
           </a>
         </div>
       </section>
@@ -103,7 +103,7 @@ export default function SecurityPage() {
         <div className="mx-auto max-w-3xl">
           <h2 className="text-4xl font-medium tracking-[-0.04em] md:text-5xl">Questions about our security posture?</h2>
           <p className="mt-5 text-lg text-[#6A6258]">Request our DPA, security questionnaire, or documentation pack.</p>
-          <a href="mailto:demo@secprompt.io" className="mt-8 inline-block rounded-full bg-[#16120F] px-8 py-4 text-white font-medium hover:bg-[#2a2420] transition-colors">
+          <a href="/demo#contact" className="mt-8 inline-block rounded-full bg-[#16120F] px-8 py-4 text-white font-medium hover:bg-[#2a2420] transition-colors">
             Contact us →
           </a>
         </div>

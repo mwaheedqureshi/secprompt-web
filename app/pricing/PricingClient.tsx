@@ -2,8 +2,7 @@
 
 import { CheckCircle2 } from "lucide-react";
 
-const assessUrl = "http://localhost:3000/assess";
-const demoUrl = "mailto:demo@secprompt.io";
+const demoUrl = "/demo#contact";
 
 const plans = [
   {
@@ -13,8 +12,8 @@ const plans = [
     features: [
       "3 users",
       "10 assessments/month",
-      "5 frameworks (NIST CSF, ISO 27001, DORA, GDPR, NIST 800-53)",
-      "AI gap analysis (met/partial/gap per control)",
+      "5 supported frameworks (NIST CSF 2.0, NIST 800-53, ISO 27001, DORA, GDPR)",
+      "Evidence-based gap analysis (met/partial/gap per control)",
       "Transparent evidence-based assessment view",
       "PDF report export",
       "Email support",
@@ -28,7 +27,7 @@ const plans = [
     features: [
       "10 users",
       "50 assessments/month",
-      "All frameworks + custom baseline controls",
+      "All supported frameworks + customer-owned baseline controls",
       "Everything in Starter, plus:",
       "Evidence library with supplier grouping",
       "Risk register with status tracking",
@@ -51,7 +50,7 @@ const plans = [
       "Dedicated deployment (your infrastructure)",
       "SLA guarantee",
       "Dedicated customer success manager",
-      "Custom framework integrations",
+      "Customer-owned control baseline support",
       "On-premise deployment option",
     ],
     cta: "Contact Sales",
@@ -61,7 +60,7 @@ const plans = [
 const faqs = [
   {
     question: "What frameworks are supported?",
-    answer: "NIST CSF 2.0, ISO 27001:2022, DORA, GDPR, NIST 800-53, and custom baseline controls.",
+    answer: "SecPrompt currently supports NIST CSF 2.0, NIST 800-53, ISO 27001, DORA, and GDPR. Customers can also maintain their own baseline controls.",
   },
   {
     question: "How is an assessment counted?",
@@ -116,7 +115,7 @@ export default function PricingClient() {
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   {[
-                    '5 frameworks or Unified Control Library',
+                    '5 supported frameworks or customer-owned baseline',
                     'Up to 5 supplier documents',
                     'Full gap analysis — 60+ controls',
                     'Data permanently deleted after download',
@@ -134,7 +133,7 @@ export default function PricingClient() {
                   <span className="text-slate-400 ml-2">per assessment</span>
                 </div>
                 <a
-                  href={assessUrl}
+                  href="/demo#contact"
                   className="bg-white text-slate-900 font-bold px-8 py-4 rounded-xl hover:bg-slate-100 transition-colors text-lg whitespace-nowrap"
                 >
                   Run a £49 Assessment →

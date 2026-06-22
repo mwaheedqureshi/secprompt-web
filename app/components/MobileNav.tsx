@@ -4,8 +4,9 @@ import { useState } from "react";
 const NAV_LINKS = [
   { href: "/#capabilities", label: "Product" },
   { href: "/methodology", label: "Methodology" },
+  { href: "/pricing", label: "Pricing" },
   { href: "/#security", label: "Security" },
-  { href: "/demo", label: "Company" },
+  { href: "/company", label: "Company" },
 ];
 
 export default function MobileNav() {
@@ -27,7 +28,7 @@ export default function MobileNav() {
               {label}
             </a>
           ))}
-          <a href="/demo" onClick={() => setOpen(false)}
+          <a href="/demo#contact" onClick={() => setOpen(false)}
             className="mt-1 block rounded-xl bg-primary-600 px-4 py-3 text-center text-sm font-semibold text-white">
             Book a demo
           </a>

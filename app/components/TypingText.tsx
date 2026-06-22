@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 
 const DEFAULT_PHRASES = [
-  "solving real problems",
+  "Evidence-Based Supplier Risk",
   "creating real impact",
   "protecting your business",
   "know your supplier risk",

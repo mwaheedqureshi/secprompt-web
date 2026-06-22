@@ -1,38 +1,38 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { AlertTriangle, ArrowRight, Brain, CheckCircle2, Database, FileSearch, ShieldCheck } from 'lucide-react';
+import { AlertTriangle, ArrowRight, CheckCircle2, ClipboardCheck, Database, FileSearch, ShieldCheck } from 'lucide-react';
+import ProductDemo from '@/src/components/marketing/ProductDemo';
 import { StaggerContainer, StaggerItem } from '../animations';
-import { AssessmentShowcase } from './AssessmentShowcase';
 
 const steps = [
   {
-    title: 'Requirement',
-    description: 'Security obligation is normalized into a testable control.',
+    title: 'Requirements',
+    description: 'Internal controls, obligations, or framework requirements define the review.',
     icon: ShieldCheck,
     tone: 'bg-primary-50 text-primary-700 border-primary-200',
   },
   {
-    title: 'Supplier Statements',
+    title: 'Supplier Claims',
     description: 'Supplier responses, attestations, and declarations are collected and catalogued.',
     icon: Database,
     tone: 'bg-violet-50 text-violet-700 border-violet-200',
   },
   {
     title: 'Evidence',
-    description: 'Proof is linked to certificates, policies, reports, and artifacts.',
+    description: 'Supporting materials are linked to certificates, policies, reports, and artifacts.',
     icon: FileSearch,
     tone: 'bg-cyan-50 text-cyan-700 border-cyan-200',
   },
   {
-    title: 'Assessment Analysis',
-    description: 'Identifies support, gaps, and contradictions across requirements and evidence.',
-    icon: Brain,
+    title: 'Assessment Outcome',
+    description: 'Findings identify support, gaps, and contradictions across claims and evidence.',
+    icon: ClipboardCheck,
     tone: 'bg-amber-50 text-amber-700 border-amber-200',
   },
   {
-    title: 'Risk Decision',
-    description: 'A human-reviewable verdict is produced with traceability.',
+    title: 'Review Decision',
+    description: 'A human-reviewable result is produced with evidence traceability.',
     icon: CheckCircle2,
     tone: 'bg-emerald-50 text-emerald-700 border-emerald-200',
   },
@@ -60,17 +60,25 @@ export function ThreeWayAssessmentSection() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-primary-600">Core Differentiator</p>
+          <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-primary-600">Assessment Model</p>
           <h2 className="text-4xl font-bold tracking-tight text-dark-900 md:text-5xl">
-            Requirements. Evidence. Decisions.
+            Requirements. Claims. Evidence. Outcomes.
           </h2>
           <p className="mt-5 text-lg leading-8 text-gray-600">
-            SecPrompt validates supplier statements against your security requirements and submitted evidence to produce explainable findings your team can defend.
+            SecPrompt validates supplier statements against your requirements and submitted evidence to produce explainable findings your team can defend.
           </p>
         </motion.div>
 
         <div className="grid gap-8 lg:grid-cols-[1.35fr_0.65fr]">
-          <AssessmentShowcase variant="compact" />
+          <motion.div
+            className="overflow-hidden rounded-3xl border border-gray-200 bg-[#070810] p-2 shadow-xl shadow-gray-900/10"
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true, margin: '-80px' }}
+          >
+            <ProductDemo />
+          </motion.div>
 
           <motion.div
             className="rounded-3xl border border-gray-200 bg-white p-5 shadow-xl shadow-gray-900/5 md:p-6"
@@ -81,7 +89,7 @@ export function ThreeWayAssessmentSection() {
           >
             <div className="mb-5 flex items-center justify-between gap-4">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-widest text-gray-500">Assessment Flow</p>
+                <p className="text-xs font-semibold uppercase tracking-widest text-gray-500">Traceable Flow</p>
                 <h3 className="mt-1 text-xl font-bold text-dark-900">MFA control verification</h3>
               </div>
               <span className="rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1.5 text-xs font-bold text-emerald-700">
@@ -134,7 +142,7 @@ export function ThreeWayAssessmentSection() {
                     <AlertTriangle className="h-5 w-5" />
                   </span>
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-widest text-gray-500">Contradiction Detection</p>
+                    <p className="text-xs font-semibold uppercase tracking-widest text-gray-500">Claim Validation</p>
                     <h3 className="text-lg font-bold text-dark-900">Unsupported assurance flagged</h3>
                   </div>
                 </div>

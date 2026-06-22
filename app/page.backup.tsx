@@ -1,7 +1,7 @@
 'use client';
 
 import { HeroSection } from '@/app/components/sections/HeroSection';
-import { AIDifferentiationSection } from '@/app/components/sections/AIDifferentiationSection';
+import { EvidenceDifferentiationSection } from '@/app/components/sections/EvidenceDifferentiationSection';
 import { ThreeWayAssessmentSection } from '@/app/components/sections/ThreeWayAssessmentSection';
 import { CapabilitiesGridSection } from '@/app/components/sections/CapabilitiesGridSection';
 import { LiveRiskIntelligenceSection } from '@/app/components/sections/LiveRiskIntelligenceSection';
@@ -15,10 +15,10 @@ export default function Home() {
       {/* Hero - Premium animated GIF showcase */}
       <HeroSection />
 
-      {/* AI Differentiation - Dark section with 3 core differentiators */}
-      <AIDifferentiationSection />
+      {/* Evidence differentiation - Dark section with 3 core differentiators */}
+      <EvidenceDifferentiationSection />
 
-      {/* 3-Way Assessment Engine - Core technology showcase with GIF + breakdown */}
+      {/* Evidence assessment model - Core showcase with GIF + breakdown */}
       <ThreeWayAssessmentSection />
 
       {/* Capabilities Grid - 8 enterprise features */}

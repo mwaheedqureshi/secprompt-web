@@ -8,22 +8,24 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "SecPrompt — AI-Powered Third-Party Risk Assessment",
+  title: "SecPrompt - Evidence-Based Supplier Assessment",
   description:
-    "Verify supplier security claims against real evidence. Detect gaps, contradictions and risks before they become third-party incidents.",
+    "Verify supplier claims against real evidence. Produce explainable, traceable supplier assessments with audit-ready reporting.",
   keywords: [
-    "TPRM",
+    "supplier assurance",
     "supplier security",
     "third-party risk",
-    "AI assessment",
+    "evidence validation",
     "ISO 27001",
-    "SOC2",
+    "NIST CSF 2.0",
+    "NIST 800-53",
     "DORA",
+    "GDPR",
   ],
   openGraph: {
-    title: "SecPrompt — AI-Powered Third-Party Risk Assessment",
+    title: "SecPrompt - Evidence-Based Supplier Assessment",
     description:
-      "Verify supplier security claims against real evidence. Detect gaps, contradictions and risks before they become third-party incidents.",
+      "Verify supplier claims against real evidence. Produce explainable, traceable supplier assessments with audit-ready reporting.",
     type: "website",
   },
 };

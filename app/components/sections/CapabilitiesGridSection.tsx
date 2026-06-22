@@ -2,72 +2,71 @@
 
 import { motion } from 'framer-motion';
 import {
-  Brain,
   GitBranch,
   FileText,
   Users,
   AlertTriangle,
   TrendingUp,
-  CheckSquare,
+  ShieldCheck,
 } from 'lucide-react';
 import { StaggerContainer, StaggerItem, cardHoverVariants } from '../animations';
 
 export function CapabilitiesGridSection() {
   const capabilities = [
     {
-      icon: Brain,
-      title: 'Evidence-Based Assessment',
+      icon: FileText,
+      title: 'Evidence Validation',
       description:
-        'Validates supplier requirements, supplier statements, and supporting evidence to produce explainable assessment outcomes.',
+        'Assess whether supplier statements are supported by documented evidence.',
       color: 'from-purple-500 to-purple-600',
     },
     {
       icon: GitBranch,
-      title: 'Unified Control Library',
+      title: 'Explainable Findings',
       description:
-        'Normalize and map requirements across security, privacy, and regulatory frameworks.',
+        'Understand why controls passed, failed, or require further review.',
       color: 'from-blue-500 to-blue-600',
     },
     {
       icon: FileText,
-      title: 'Evidence Intelligence',
+      title: 'Assessment Traceability',
       description:
-        'Automatically identifies relevant evidence, supporting artifacts, and assessment inputs from supplier documentation.',
+        'Trace conclusions back to supporting evidence and reviewed materials.',
       color: 'from-amber-500 to-amber-600',
     },
     {
       icon: Users,
-      title: 'Human-in-the-Loop Review',
+      title: 'Human Review Support',
       description:
-        'Analyst validation and approval before findings become actionable risks.',
+        'Give reviewers structured evidence, rationale, and decision history before sign-off.',
       color: 'from-emerald-500 to-emerald-600',
     },
     {
       icon: AlertTriangle,
-      title: 'AI Risk Reasoning',
+      title: 'Unsupported Claim Detection',
       description:
-        'Validates evidence, identifies gaps, and detects contradictions across supplier documentation.',
+        'Identify missing evidence, partial control coverage, and contradictions across supplier materials.',
       color: 'from-red-500 to-red-600',
     },
     {
       icon: GitBranch,
-      title: 'Framework Mapping',
+      title: 'Framework Alignment',
       description:
-        'Reuse evidence across multiple frameworks including ISO 27001, NIST, DORA, PCI DSS, and GDPR.',
+        'Assess suppliers against internal requirements and recognized frameworks.',
       color: 'from-cyan-500 to-cyan-600',
     },
     {
       icon: TrendingUp,
-      title: 'Assessment Confidence',
+      title: 'Confidence & Evidence Quality',
       description:
-        'Transparent confidence indicators help reviewers understand the reliability of assessment outcomes.',
+        'Understand the strength and completeness of the evidence used in each assessment.',
       color: 'from-green-500 to-green-600',
     },
     {
-      icon: CheckSquare,
+      icon: ShieldCheck,
       title: 'Audit-Ready Reporting',
       description:
-        'Evidence traceability, decision history, and assessment rationale in every report.',
+        'Generate structured reports for procurement, risk, security, compliance, and audit stakeholders.',
       color: 'from-indigo-500 to-indigo-600',
     },
   ];
@@ -89,13 +88,13 @@ export function CapabilitiesGridSection() {
           viewport={{ once: true }}
         >
           <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-secondary-600">
-            Enterprise Capabilities
+            Product Capabilities
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-dark-900 mb-4">
-            Built for Security Leaders
+            Built for Evidence-Based Supplier Reviews
           </h2>
           <p className="max-w-2xl mx-auto text-lg text-gray-600">
-            Comprehensive platform to verify, assess, and audit third-party risk with intelligence
+            Validate supplier claims, explain findings, and preserve the traceability needed for defensible risk decisions
           </p>
         </motion.div>
 
@@ -157,14 +156,14 @@ export function CapabilitiesGridSection() {
           viewport={{ once: true }}
         >
           <p className="text-sm font-semibold uppercase tracking-widest text-primary-600 mb-3">
-            Platform Coverage
+            Supplier Assurance Coverage
           </p>
           <h3 className="text-2xl font-bold text-dark-900 mb-3">
-            Enterprise-Grade Security & Compliance
+            Evidence Review Across Frameworks and Requirements
           </h3>
           <p className="max-w-3xl mx-auto text-gray-700">
-            SecPrompt integrates with your existing security stack, providing a unified platform
-            for third-party risk assessment, evidence management, and audit compliance.
+            SecPrompt supports internal control baselines, regulatory obligations, and common
+            security frameworks so supplier evidence can be reviewed consistently.
           </p>
         </motion.div>
       </div>

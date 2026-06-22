@@ -2,17 +2,17 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { ArrowRight, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import TypingText from "./TypingText";
 
-const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
-const demoUrl = "/demo";
+const demoUrl = "/demo#contact";
 
 const navLinks = [
   { href: "/#capabilities", label: "Product" },
   { href: "/methodology", label: "Methodology" },
+  { href: "/pricing", label: "Pricing" },
   { href: "/#security", label: "Security" },
-  { href: "/demo", label: "Company" },
+  { href: "/company", label: "Company" },
 ];
 
 export default function Navbar() {
@@ -29,7 +29,7 @@ export default function Navbar() {
             <span className="text-xl font-bold tracking-tight text-dark-900">SecPrompt</span>
           </div>
           <span className="mt-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-gray-500">
-            AI-Powered TPRM
+            Evidence-Based Supplier Assessment
           </span>
           <span className="mt-0.5 text-[10px] font-medium tracking-wide text-emerald-600">
             <TypingText />
@@ -51,13 +51,6 @@ export default function Navbar() {
           >
             Book a Demo
           </Link>
-          <a
-            href={appUrl}
-            className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary-600/20 transition-colors hover:bg-primary-700"
-          >
-            Login
-            <ArrowRight className="h-4 w-4" />
-          </a>
         </div>
 
         <button
@@ -90,14 +83,6 @@ export default function Navbar() {
           >
             Book a Demo
           </Link>
-          <a
-            href={appUrl}
-            onClick={() => setOpen(false)}
-            className="mt-2 flex items-center justify-center gap-2 rounded-xl bg-primary-600 px-4 py-3 text-sm font-semibold text-white"
-          >
-            Login
-            <ArrowRight className="h-4 w-4" />
-          </a>
         </div>
       ) : null}
     </nav>

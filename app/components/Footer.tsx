@@ -13,10 +13,10 @@ const columns = [
   {
     title: "Company",
     links: [
-      { href: "/demo", label: "About" },
-      { href: "/demo", label: "Blog" },
-      { href: "/demo", label: "Careers" },
-      { href: "/demo", label: "Contact" },
+      { href: "/company", label: "About" },
+      { href: "/company", label: "Blog" },
+      { href: "/company", label: "Careers" },
+      { href: "/demo#contact", label: "Contact" },
     ],
   },
   {
@@ -42,7 +42,7 @@ export default function Footer() {
             <span className="text-lg font-bold">SecPrompt</span>
           </div>
           <p className="max-w-xs text-sm leading-6 text-white/65">
-            AI-powered third-party risk assessment platform
+            Evidence-based supplier assessment platform
           </p>
           <p className="mt-6 text-xs text-white/45">© 2026 SecPrompt</p>
         </div>

@@ -21,13 +21,13 @@ export function LiveRiskIntelligenceSection() {
           viewport={{ once: true }}
         >
           <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-secondary-400">
-            Live Operations
+            Assessment Workspace
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Real-Time Risk Intelligence Dashboard
+            Evidence Review and Findings Dashboard
           </h2>
           <p className="max-w-2xl mx-auto text-lg text-gray-300">
-            Monitor supplier assessments, findings, and evidence traceability in one unified workspace
+            Review supplier claims, evidence quality, findings, and traceability in one unified workspace
           </p>
         </motion.div>
 
@@ -207,16 +207,16 @@ export function LiveRiskIntelligenceSection() {
         >
           {[
             {
-              title: 'Real-Time Verification',
-              description: 'AI assessment results update as new evidence is submitted',
+              title: 'Evidence Review Status',
+              description: 'Assessment outcomes update as supplier evidence is reviewed',
             },
             {
               title: 'Complete Audit Trail',
-              description: 'Every decision, reasoning, and evidence reference is logged and traceable',
+              description: 'Every decision, rationale, and evidence reference is logged and traceable',
             },
             {
               title: 'Human Review Workflow',
-              description: 'Analysts validate all AI findings before they impact your risk register',
+              description: 'Analysts validate findings before they inform risk decisions',
             },
           ].map((feature, i) => (
             <motion.div
